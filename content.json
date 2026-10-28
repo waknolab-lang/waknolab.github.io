@@ -1,7 +1,7 @@
 {
   "hero": {
     "eyebrow": "Producție publicitară / Print / Personalizare",
-    "title": "MADE TO BE SEEN. test ",
+    "title": "MADE TO BE SEEN.",
     "description": "De la idee la produsul final. Stickere, colantări, grafică pentru vitrine, materiale promoționale și personalizări care îți fac brandul vizibil."
   },
   "services": [
@@ -86,5 +86,11 @@
     "email": "waknolab@gmail.com",
     "instagram": "https://www.instagram.com/wakno_lab/",
     "tiktok": "https://www.tiktok.com/@wakno.lab"
+  },
+  "gallery": [],
+  "design": {
+    "background": "#0a0a0a",
+    "accent": "#ff641e",
+    "text": "#ffffff"
   }
 }
