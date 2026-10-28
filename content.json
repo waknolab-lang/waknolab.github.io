@@ -1,8 +1,8 @@
 {
   "hero": {
-    "eyebrow": "Producție publicitară / Print / Personalizare",
-    "title": "MADE TO BE SEEN.",
-    "description": "De la idee la produsul final. Stickere, colantări, grafică pentru vitrine, materiale promoționale și personalizări care îți fac brandul vizibil."
+    "eyebrow": "CREATIVE PRODUCTION / WAKNO LABS",
+    "title": "IDEAS TAKE SHAPE.",
+    "description": "De la idee la produsul final. Stickere, colantări, grafică pentru vitrine, textile personalizate și materiale publicitare create pentru brandul tău."
   },
   "services": [
     {
@@ -52,6 +52,13 @@
       "description": "Printuri decorative și tablouri personalizate.",
       "image": "assets/canvas.webp",
       "large": true
+    },
+    {
+      "title": "Flyere & Postere",
+      "description": "Design grafic, printare și finisare pentru afaceri, evenimente și campanii.",
+      "image": "assets/bannere.webp",
+      "large": true,
+      "category": "Print publicitar"
     }
   ],
   "clients": [
@@ -85,25 +92,16 @@
     "description": "Ai un proiect în minte? Spune-ne ce ai nevoie, iar noi analizăm solicitarea și revenim cu detalii.",
     "email": "waknolab@gmail.com",
     "instagram": "https://www.instagram.com/wakno_lab/",
-    "tiktok": "https://www.tiktok.com/@wakno.lab"
+    "tiktok": "https://www.tiktok.com/@wakno.lab",
+    "whatsapp": "",
+    "whatsappMessage": "Bună! Aș dori o ofertă de la WAKNO LABS."
   },
-  "gallery": [
-    {
-      "title": "test ",
-      "description": "test ",
-      "category": "Portofoliu",
-      "image": "assets/uploads/1793226589010-1926a8a8-60f.jpg"
-    },
-    {
-      "title": "Proiect nou",
-      "description": "",
-      "category": "Portofoliu",
-      "image": ""
-    }
-  ],
+  "gallery": [],
   "design": {
     "background": "#0a0a0a",
-    "accent": "#ff641e",
-    "text": "#ffffff"
+    "accent": "#468184",
+    "text": "#dfdfdc",
+    "panel": "#26262a",
+    "glow": "multicolor"
   }
 }
