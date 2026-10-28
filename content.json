@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "eyebrow": "Producție publicitară / Print / Personalizare",
+    "title": "MADE TO BE SEEN.",
+    "description": "De la idee la produsul final. Stickere, colantări, grafică pentru vitrine, materiale promoționale și personalizări care îți fac brandul vizibil."
+  },
+  "services": [
+    {
+      "title": "Colantări & inscripționări auto",
+      "description": "Autoturisme, autoutilitare și flote comerciale.",
+      "image": "assets/auto.webp",
+      "large": true
+    },
+    {
+      "title": "Vitrine & spații comerciale",
+      "description": "Autocolante pentru geamuri, vitrine și suprafețe.",
+      "image": "assets/vitrine.webp",
+      "large": true
+    },
+    {
+      "title": "Stickere",
+      "description": "Print, decupare pe contur și etichete.",
+      "image": "assets/stickere.webp",
+      "large": false
+    },
+    {
+      "title": "Bannere",
+      "description": "Print de mari dimensiuni și materiale promoționale.",
+      "image": "assets/bannere.webp",
+      "large": false
+    },
+    {
+      "title": "Textile personalizate",
+      "description": "Tricouri, hanorace, șepci și accesorii.",
+      "image": "assets/textile.webp",
+      "large": false
+    },
+    {
+      "title": "Roll-up-uri",
+      "description": "Sisteme de expunere pentru evenimente.",
+      "image": "assets/rollup.jpg",
+      "large": false
+    },
+    {
+      "title": "Printare 3D",
+      "description": "Obiecte, prototipuri și piese personalizate.",
+      "image": "assets/print3d.webp",
+      "large": true
+    },
+    {
+      "title": "Tablouri canvas",
+      "description": "Printuri decorative și tablouri personalizate.",
+      "image": "assets/canvas.webp",
+      "large": true
+    }
+  ],
+  "clients": [
+    {
+      "name": "Kaya Finance & Consulting",
+      "image": "assets/client-kaya.webp"
+    },
+    {
+      "name": "Booyakafé",
+      "image": "assets/client-booyakafe.webp"
+    },
+    {
+      "name": "ACA Industrial",
+      "image": "assets/client-aca.webp"
+    },
+    {
+      "name": "BOEM",
+      "image": "assets/client-boem.webp"
+    },
+    {
+      "name": "Njoy Garden & Club",
+      "image": "assets/client-njoy.webp"
+    }
+  ],
+  "about": {
+    "title": "IDEILE TALE PRIND VIAȚĂ.",
+    "description": "La WAKNO LABS transformăm ideile în materiale vizuale care atrag atenția. Fie că ai nevoie de un sticker, un tricou personalizat sau de o inscripționare pentru afacerea ta, pornim de la nevoile proiectului tău."
+  },
+  "contact": {
+    "title": "HAI SĂ FACEM CEVA VIZIBIL.",
+    "description": "Ai un proiect în minte? Spune-ne ce ai nevoie, iar noi analizăm solicitarea și revenim cu detalii.",
+    "email": "waknolab@gmail.com",
+    "instagram": "https://www.instagram.com/wakno_lab/",
+    "tiktok": "https://www.tiktok.com/@wakno.lab"
+  }
+}
