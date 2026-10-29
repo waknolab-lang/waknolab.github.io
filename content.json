@@ -99,9 +99,9 @@
   },
   "gallery": [],
   "design": {
-    "background": "#0a0a0a",
-    "accent": "#468184",
-    "text": "#dfdfdc",
+    "background": "#000000",
+    "accent": "#2a6b6f",
+    "text": "#ffffff",
     "panel": "#26262a",
     "glow": "multicolor"
   },
