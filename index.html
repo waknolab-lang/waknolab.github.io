@@ -129,13 +129,25 @@ const colors=['#00cdec','#ed008e','#ffdf00','#dfdfdc','#00cdec','#dfdfdc'],tilts
 try{if(!sessionStorage.getItem('wakno-shape-played')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){word.classList.add('play');sessionStorage.setItem('wakno-shape-played','1')}}catch{word.classList.add('play')}
 }
 };window.addEventListener('wakno-content-ready',startHero,{once:true});setTimeout(startHero,1800);
+// Titlurile pornesc cand SECTIUNEA (nu textul mascat) intra in viewport.
+// Clasa este aplicata dupa ce sectiunea devine vizibila, evitand animatia ascunsa.
 const titles=[...document.querySelectorAll('.section-header h2,.feature h2,.process h2,.contact h2,.intro h1')];
 const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if(!reduceMotion&&'IntersectionObserver'in window){
- const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
-  if(entry.isIntersecting){entry.target.classList.add('wakno-visible');observer.unobserve(entry.target)}
- }),{threshold:0.08,rootMargin:'0px 0px -35px 0px'});
- titles.forEach(t=>{t.classList.add('wakno-title-reveal');observer.observe(t)});
-}else titles.forEach(t=>t.classList.add('wakno-visible'));
+if(!reduceMotion && 'IntersectionObserver' in window){
+  const pairs=titles.map(title=>({title,section:title.closest('section')||title.parentElement}));
+  pairs.forEach(({title})=>title.classList.add('wakno-title-reveal'));
+  const sectionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(!entry.isIntersecting)return;
+    const matching=pairs.filter(p=>p.section===entry.target);
+    matching.forEach(({title})=>{
+      const parentReveal=title.closest('.reveal');
+      if(parentReveal)parentReveal.classList.add('visible');
+      // Doua frame-uri permit browserului sa afiseze starea initiala inainte de animatie.
+      requestAnimationFrame(()=>requestAnimationFrame(()=>title.classList.add('wakno-visible')));
+    });
+    sectionObserver.unobserve(entry.target);
+  }),{threshold:0.02,rootMargin:'0px 0px -60px 0px'});
+  [...new Set(pairs.map(p=>p.section))].forEach(section=>sectionObserver.observe(section));
+}
 })();
 </script></body></html>
