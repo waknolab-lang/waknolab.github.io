@@ -116,7 +116,10 @@
     "accent": "#2a6b6f",
     "text": "#ffffff",
     "panel": "#26262a",
-    "glow": "multicolor"
+    "glow": "multicolor",
+    "typography": {
+      "headingFont": "Oswald"
+    }
   },
   "branding": {
     "headerLogo": "assets/wakno-logo.png"
