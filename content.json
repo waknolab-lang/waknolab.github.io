@@ -9,13 +9,13 @@
       "title": "Colantări & inscripționări auto",
       "description": "Autoturisme, autoutilitare și flote comerciale.",
       "image": "assets/auto.webp",
-      "large": true
+      "large": false
     },
     {
       "title": "Vitrine & spații comerciale",
       "description": "Autocolante pentru geamuri, vitrine și suprafețe.",
       "image": "assets/vitrine.webp",
-      "large": true
+      "large": false
     },
     {
       "title": "Stickere",
@@ -45,19 +45,19 @@
       "title": "Printare 3D",
       "description": "Obiecte, prototipuri și piese personalizate.",
       "image": "assets/print3d.webp",
-      "large": true
+      "large": false
     },
     {
       "title": "Tablouri canvas",
       "description": "Printuri decorative și tablouri personalizate.",
       "image": "assets/canvas.webp",
-      "large": true
+      "large": false
     },
     {
       "title": "Flyere & Postere",
       "description": "Design grafic, printare și finisare pentru afaceri, evenimente și campanii.",
       "image": "assets/bannere.webp",
-      "large": true,
+      "large": false,
       "category": "Print publicitar"
     },
     {
