@@ -142,7 +142,12 @@
     "panel": "#26262a",
     "glow": "multicolor",
     "typography": {
-      "headingFont": "Oswald"
+      "headingFont": "Inter",
+      "bodyFont": "Montserrat",
+      "bodySize": 20,
+      "mobileMenuSize": 32,
+      "menuFont": "Roboto",
+      "headingSize": 75
     }
   },
   "branding": {
