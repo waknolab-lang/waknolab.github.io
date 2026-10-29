@@ -18,6 +18,49 @@
       "large": true
     },
     {
+      "title": "Stickere",
+      "description": "Print, decupare pe contur și etichete.",
+      "image": "assets/stickere.webp",
+      "large": false
+    },
+    {
+      "title": "Bannere",
+      "description": "Print de mari dimensiuni și materiale promoționale.",
+      "image": "assets/bannere.webp",
+      "large": false
+    },
+    {
+      "title": "Textile personalizate",
+      "description": "Tricouri, hanorace, șepci și accesorii.",
+      "image": "assets/textile.webp",
+      "large": false
+    },
+    {
+      "title": "Roll-up-uri",
+      "description": "Sisteme de expunere pentru evenimente.",
+      "image": "assets/rollup.jpg",
+      "large": false
+    },
+    {
+      "title": "Printare 3D",
+      "description": "Obiecte, prototipuri și piese personalizate.",
+      "image": "assets/print3d.webp",
+      "large": true
+    },
+    {
+      "title": "Tablouri canvas",
+      "description": "Printuri decorative și tablouri personalizate.",
+      "image": "assets/canvas.webp",
+      "large": true
+    },
+    {
+      "title": "Flyere & Postere",
+      "description": "Design grafic, printare și finisare pentru afaceri, evenimente și campanii.",
+      "image": "assets/bannere.webp",
+      "large": true,
+      "category": "Print publicitar"
+    },
+    {
       "title": "Casete luminoase",
       "description": "Reclame luminoase pentru fațade, spații comerciale și recepții.",
       "image": "assets/service-1.webp",
@@ -36,53 +79,10 @@
       "large": false
     },
     {
-      "title": "Stickere",
-      "description": "Print, decupare pe contur și etichete.",
-      "image": "assets/stickere.webp",
-      "large": false
-    },
-    {
-      "title": "Bannere",
-      "description": "Print de mari dimensiuni și materiale promoționale.",
-      "image": "assets/bannere.webp",
-      "large": false
-    },
-    {
       "title": "Print DTF",
       "description": "Transferuri DTF pentru personalizare textile. Vezi formatele și cere o ofertă.",
       "image": "assets/textile.webp",
       "large": false
-    },
-    {
-      "title": "Textile personalizate",
-      "description": "Tricouri, hanorace, șepci și accesorii.",
-      "image": "assets/textile.webp",
-      "large": false
-    },
-    {
-      "title": "Roll-up-uri",
-      "description": "Sisteme de expunere pentru evenimente.",
-      "image": "assets/rollup.jpg",
-      "large": false
-    },
-    {
-      "title": "Flyere & Postere",
-      "description": "Design grafic, printare și finisare pentru afaceri, evenimente și campanii.",
-      "image": "assets/bannere.webp",
-      "large": true,
-      "category": "Print publicitar"
-    },
-    {
-      "title": "Printare 3D",
-      "description": "Obiecte, prototipuri și piese personalizate.",
-      "image": "assets/print3d.webp",
-      "large": true
-    },
-    {
-      "title": "Tablouri canvas",
-      "description": "Printuri decorative și tablouri personalizate.",
-      "image": "assets/canvas.webp",
-      "large": true
     }
   ],
   "clients": [
@@ -167,7 +167,7 @@
     "email": "waknolab@gmail.com",
     "available": true,
     "promotion": "",
-    "image": "assets/uploads/1793314081611-8c807dc2-ca2.jpg",
+    "image": "assets/textile.webp",
     "widths": [
       {
         "label": "Rolă 90 cm",
@@ -209,41 +209,30 @@
           {
             "min": 1,
             "max": 5,
-            "price": 50
+            "price": null
           },
           {
             "min": 5,
             "max": 30,
-            "price": 45
+            "price": null
           },
           {
             "min": 30,
             "max": 80,
-            "price": 42
+            "price": null
           },
           {
             "min": 80,
             "max": 150,
-            "price": 38
+            "price": null
           },
           {
             "min": 150,
             "max": null,
-            "price": 32
+            "price": null
           }
         ]
       }
     ]
-  },
-  "siteSettings": {
-    "videoBackground": true,
-    "videoOpacity": 0.32,
-    "servicesCompact": true
-  },
-  "seo": {
-    "homeTitle": "Producție Publicitară București | WAKNO LABS",
-    "homeDescription": "WAKNO LABS – colantări auto, reclame luminoase, stickere, print DTF și personalizări în București.",
-    "portfolioTitle": "Portofoliu | WAKNO LABS",
-    "dtfTitle": "Print DTF | WAKNO LABS"
   }
 }
