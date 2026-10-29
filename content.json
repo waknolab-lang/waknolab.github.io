@@ -96,7 +96,14 @@
     "whatsapp": "",
     "whatsappMessage": "Bună! Aș dori o ofertă de la WAKNO LABS."
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "title": "test",
+      "description": "",
+      "category": "Portofoliu",
+      "image": "assets/uploads/1793232211858-1b658937-e13.jpg"
+    }
+  ],
   "design": {
     "background": "#0a0a0a",
     "accent": "#468184",
