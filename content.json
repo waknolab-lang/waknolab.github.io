@@ -1,7 +1,7 @@
 {
   "hero": {
     "eyebrow": "CREATIVE PRODUCTION / WAKNO LABS",
-    "title": "IDEAS TAKE SHAPE.",
+    "title": "CONCEPT TO CRAFT.",
     "description": "De la idee la produsul final. Stickere, colantări, grafică pentru vitrine, textile personalizate și materiale publicitare create pentru brandul tău."
   },
   "services": [
@@ -59,6 +59,30 @@
       "image": "assets/bannere.webp",
       "large": true,
       "category": "Print publicitar"
+    },
+    {
+      "title": "Casete luminoase",
+      "description": "Reclame luminoase pentru fațade, spații comerciale și recepții.",
+      "image": "assets/service-1.webp",
+      "large": false
+    },
+    {
+      "title": "Litere volumetrice",
+      "description": "Litere 3D pentru identitate vizuală, cu sau fără iluminare.",
+      "image": "assets/service-2.webp",
+      "large": false
+    },
+    {
+      "title": "Cuburi promoționale luminoase",
+      "description": "Cuburi personalizate și elemente luminoase pentru promovare.",
+      "image": "assets/service-3.webp",
+      "large": false
+    },
+    {
+      "title": "Print DTF",
+      "description": "Transferuri DTF pentru personalizare textile. Vezi formatele și cere o ofertă.",
+      "image": "assets/textile.webp",
+      "large": false
     }
   ],
   "clients": [
@@ -123,5 +147,92 @@
   },
   "branding": {
     "headerLogo": "assets/wakno-logo.png"
+  },
+  "businessHours": {
+    "timezone": "Europe/Bucharest",
+    "weekdays": "Luni–Vineri",
+    "weekdayHours": "09:00–16:00",
+    "weekend": "Sâmbătă–Duminică: închis"
+  },
+  "announcements": {
+    "enabled": false,
+    "type": "informare",
+    "message": "",
+    "startDate": "",
+    "endDate": ""
+  },
+  "dtf": {
+    "title": "PRINT DTF",
+    "subtitle": "Transferuri DTF pentru textile. Selectează lățimea și lungimea, apoi trimite solicitarea pe email.",
+    "email": "waknolab@gmail.com",
+    "available": true,
+    "promotion": "",
+    "image": "assets/textile.webp",
+    "widths": [
+      {
+        "label": "Rolă 90 cm",
+        "widthCm": 90,
+        "printableCm": 88,
+        "tiers": [
+          {
+            "min": 1,
+            "max": 5,
+            "price": null
+          },
+          {
+            "min": 5,
+            "max": 30,
+            "price": null
+          },
+          {
+            "min": 30,
+            "max": 80,
+            "price": null
+          },
+          {
+            "min": 80,
+            "max": 150,
+            "price": null
+          },
+          {
+            "min": 150,
+            "max": null,
+            "price": null
+          }
+        ]
+      },
+      {
+        "label": "Rolă 60 cm",
+        "widthCm": 60,
+        "printableCm": 58,
+        "tiers": [
+          {
+            "min": 1,
+            "max": 5,
+            "price": null
+          },
+          {
+            "min": 5,
+            "max": 30,
+            "price": null
+          },
+          {
+            "min": 30,
+            "max": 80,
+            "price": null
+          },
+          {
+            "min": 80,
+            "max": 150,
+            "price": null
+          },
+          {
+            "min": 150,
+            "max": null,
+            "price": null
+          }
+        ]
+      }
+    ]
   }
 }
