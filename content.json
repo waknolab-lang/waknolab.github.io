@@ -182,7 +182,7 @@
           {
             "min": 5,
             "max": 30,
-            "price": null
+            "price": 50.01
           },
           {
             "min": 30,
