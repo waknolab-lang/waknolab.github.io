@@ -97,7 +97,20 @@
     "whatsappMessage": "Bună! Aș dori o ofertă de la WAKNO LABS.",
     "whatsappEnabled": true
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "title": "Proiect nou",
+      "description": "sdasdasa",
+      "category": "Portofoliu",
+      "image": "assets/uploads/1793235045396-a370ba12-5cd.jpg"
+    },
+    {
+      "title": "Proiect nou",
+      "description": "",
+      "category": "Portofoliu",
+      "image": "assets/uploads/1793235057825-2541ce50-f0c.jpg"
+    }
+  ],
   "design": {
     "background": "#000000",
     "accent": "#2a6b6f",
