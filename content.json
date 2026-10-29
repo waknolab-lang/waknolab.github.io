@@ -142,7 +142,7 @@
     "panel": "#26262a",
     "glow": "multicolor",
     "typography": {
-      "headingFont": "Inter",
+      "headingFont": "Roboto",
       "bodyFont": "Montserrat",
       "bodySize": 20,
       "mobileMenuSize": 32,
