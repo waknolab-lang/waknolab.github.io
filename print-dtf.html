@@ -27,6 +27,36 @@
 .price-card> *{position:relative;z-index:1}
 @keyframes waknoGlowSpin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.price-card::before{animation:none}}
+
+/* Ajustari lizibilitate Print DTF: intervale si selector latime */
+.price-card .range {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: .015em;
+  color: #fff;
+}
+.tabs button {
+  border: 2.5px solid transparent;
+  background: transparent;
+  color: #f5fbfb;
+  font-weight: 800;
+  line-height: 1.35;
+  box-sizing: border-box;
+}
+.tabs button[aria-selected="true"] {
+  background: transparent;
+  color: #fff;
+  border-color: #69b5d6;
+  box-shadow: 0 0 0 1px rgba(105,181,214,.12);
+}
+.tabs button:not([aria-selected="true"]):hover {
+  border-color: rgba(105,181,214,.55);
+}
+@media (max-width: 760px) {
+  .price-card .range { font-size: 15px; }
+  .tabs button { padding: 12px 9px; }
+}
 </style></head><body><div class="ambient" aria-hidden="true"><video autoplay muted loop playsinline preload="none"><source src="assets/ambient-loop.mp4" type="video/mp4"></video></div><header class="top"><div class="wrap"><a href="index.html" aria-label="WAKNO LABS Acasă"><img id="logo" class="logo" src="assets/wakno-logo.png" alt="WAKNO LABS"></a><button class="menu-btn" id="menuBtn" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav">☰</button><nav class="nav" id="nav" aria-label="Navigare principală"><a href="index.html">Acasă</a><a href="index.html#servicii">Servicii</a><a href="print-dtf.html" aria-current="page">Print DTF</a><a href="portofoliu.html">Portofoliu</a><a href="index.html#contact">Contact</a></nav></div></header><main class="wrap"><section class="intro"><div class="eyebrow">WAKNO LABS / PERSONALIZARE TEXTILE</div><h1 id="dtfTitle">PRINT <span>DTF.</span></h1><p id="dtfSubtitle">Transferuri DTF pentru textile. Selectează lățimea și lungimea, apoi trimite solicitarea pe email.</p><div class="promo" id="promo" hidden></div><p class="availability" id="availability" hidden>Comenzile DTF sunt momentan indisponibile.</p></section><section class="glass price-panel" aria-label="Tarife Print DTF"><div class="price-head"><div><h2>Alege lățimea producției</h2><p id="printable">Selectează lățimea rolei</p></div><div class="tabs" id="widthTabs" role="tablist" aria-label="Lățime rolă"></div></div><div class="cards" id="tiers" aria-live="polite"></div><p class="note">Tarife în lei / metru liniar. Pentru intervalele fără preț publicat, solicită o ofertă. Fișierele grafice se atașează manual în email.</p></section><section class="glass order" id="comanda"><img id="dtfImage" class="order-image" src="assets/textile.webp" alt="Exemplu de personalizare textilă Print DTF"><div class="order-content"><div class="eyebrow">WAKNO LABS / COMENZI</div><h2>Solicită comanda</h2><p>Alege lungimea dorită și trimite-ne detaliile. Te contactăm pentru confirmare.</p><label for="length">Lungime dorită (metri liniari)</label><input id="length" type="number" min="0.1" step="0.1" value="1" required inputmode="decimal"><p id="selection" class="note"></p><a id="send" class="cta" href="mailto:waknolab@gmail.com?subject=Comanda%20Print%20DTF">TRIMITE COMANDA <span aria-hidden="true">↗</span></a><p class="note">Se deschide aplicația ta de email. Atașează fișierul grafic înainte de trimitere.</p></div></section></main><footer class="footer"><div class="wrap"><span>© 2026 WAKNO LABS. Toate drepturile rezervate.</span><span>CONCEPT TO CRAFT.</span></div></footer><script>
 (()=>{'use strict';let cfg={email:'waknolab@gmail.com',available:true,widths:[{label:'Rolă 90 cm',widthCm:90,printableCm:88,tiers:[]},{label:'Rolă 60 cm',widthCm:60,printableCm:58,tiers:[]}]},current=0;const $=id=>document.getElementById(id),safeAsset=s=>typeof s==='string'&&/^assets\/[a-z0-9_./-]+$/i.test(s)&&!s.includes('..');const money=n=>typeof n==='number'&&Number.isFinite(n)?new Intl.NumberFormat('ro-RO',{maximumFractionDigits:2}).format(n):null;const menu=$('menuBtn'),nav=$('nav');function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';document.body.style.overflow=''}menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰';document.body.style.overflow=open?'hidden':''});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});function draw(){const tabs=$('widthTabs');tabs.replaceChildren();(cfg.widths||[]).forEach((w,i)=>{const b=document.createElement('button');b.textContent=(w.widthCm||'')+' cm ('+(w.printableCm||'')+' cm printabil)';b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-selected',String(i===current));b.onclick=()=>{current=i;draw()};tabs.append(b)});const w=cfg.widths?.[current];if(!w)return;$('printable').textContent='Lățime totală: '+w.widthCm+' cm · Lățime printabilă: '+w.printableCm+' cm';const list=$('tiers');list.replaceChildren();for(const t of w.tiers||[]){const card=document.createElement('article');card.className='price-card';const top=document.createElement('div');const price=document.createElement('strong');const val=money(t.price);price.textContent=val||'La cerere';if(!val)price.classList.add('request');top.append(price);if(val){const unit=document.createElement('small');unit.textContent='lei/ml';top.append(unit)}const range=document.createElement('div');range.className='range';range.textContent=t.max==null?'Peste '+t.min+' ml':t.min+'–'+t.max+' ml';card.append(top,range);list.append(card)}updateLink()}function updateLink(){const w=cfg.widths?.[current];if(!w)return;const len=Math.max(.1,Number($('length').value)||1);$('selection').textContent='Selectat: '+w.label+' · '+len+' ml';const body='Bună ziua,\n\nDoresc să solicit o comandă Print DTF.\nLățime rolă: '+w.widthCm+' cm (printabilă '+w.printableCm+' cm)\nLungime: '+len+' ml\n\nVoi atașa fișierul grafic.\n\nMulțumesc!';$('send').href='mailto:'+encodeURIComponent(cfg.email||'waknolab@gmail.com')+'?subject='+encodeURIComponent('Comanda Print DTF')+'&body='+encodeURIComponent(body);$('send').setAttribute('aria-disabled',String(cfg.available===false));}$('length').addEventListener('input',updateLink);fetch('./content.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(!d)return;cfg={...cfg,...(d.dtf||{})};if(!Array.isArray(cfg.widths))cfg.widths=[];const title=cfg.title||'PRINT DTF';const h=$('dtfTitle');h.replaceChildren();if(/^PRINT\s+DTF\.?$/i.test(title.trim())){h.append(document.createTextNode('PRINT '));const s=document.createElement('span');s.textContent='DTF.';h.append(s)}else h.textContent=title;$('dtfSubtitle').textContent=cfg.subtitle||'';$('promo').textContent=cfg.promotion||'';$('promo').hidden=!cfg.promotion;$('availability').hidden=cfg.available!==false;if(safeAsset(cfg.image))$('dtfImage').src=cfg.image;if(safeAsset(d.branding?.headerLogo))$('logo').src=d.branding.headerLogo;const accent=d.design?.accent;if(/^#[a-f0-9]{6}$/i.test(accent||''))document.documentElement.style.setProperty('--accent',accent);draw()}).catch(()=>draw());draw()})();
 </script></body></html>
