@@ -155,8 +155,8 @@
     "weekend": "Sâmbătă–Duminică: închis"
   },
   "announcements": {
-    "enabled": false,
-    "type": "informare",
+    "enabled": true,
+    "type": "volum mare de comenzi",
     "message": "",
     "startDate": "",
     "endDate": ""
