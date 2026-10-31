@@ -522,30 +522,48 @@ body section#contact .eyebrow {
 #contact .wakno-quote-intro p{font-size:clamp(15px,1.6vw,18px);line-height:1.55}
 @media(max-width:640px){#contact{padding-top:105px}}
 </style><style id="wakno-quote-title-white-wave">
-/* Doar titlul de pe pagina Solicită ofertă; headerul și formularul nu sunt afectate. */
+/* Numai titlul solicitarii: aliniere stanga, un singur rand desktop, wave alb discret. */
 #contact .wakno-quote-intro {
+  max-width: min(100%, 1120px);
   margin-left: 0;
   margin-right: 0;
   text-align: left;
 }
 #contact .wakno-quote-intro .wakno-wave-title {
+  display: block;
   color: #f2f3f3;
   background: none;
   text-align: left;
+  font-size: clamp(32px, 4.15vw, 58px);
+  line-height: 1.16;
+  letter-spacing: -.04em;
+  white-space: nowrap;
 }
 #contact .wakno-wave-title .wakno-wave-word {
   display: inline-block;
   color: inherit;
-  animation: waknoTitleWave 5.8s ease-in-out infinite;
+  transform: translateY(0);
+  animation: waknoTitleWave 4.1s ease-in-out infinite;
   animation-delay: var(--wave-delay, 0s);
+  will-change: transform;
 }
 @keyframes waknoTitleWave {
-  0%, 13%, 43%, 100% { transform: translateY(0); }
-  24% { transform: translateY(-4px); }
-  34% { transform: translateY(1px); }
+  0%, 12%, 50%, 100% { transform: translateY(0); }
+  27% { transform: translateY(-7px); }
+  38% { transform: translateY(1.5px); }
+}
+@media (max-width: 760px) {
+  #contact .wakno-quote-intro .wakno-wave-title {
+    white-space: normal;
+    font-size: clamp(30px, 7.5vw, 40px);
+    line-height: 1.16;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
-  #contact .wakno-wave-title .wakno-wave-word { animation: none; }
+  #contact .wakno-wave-title .wakno-wave-word {
+    animation: none;
+    transform: none;
+  }
 }
 </style><style>
 /* Instruction immediately above service selector */
@@ -848,7 +866,7 @@ body>header.wakno-header .menu-btn[aria-expanded="true"] .wakno-menu-icon::after
 <header class="topbar wakno-header"><div class="container navrow wakno-header-inner"><a aria-label="WAKNO LABS — Acasă" class="logo wakno-logo" href="index.html"><img alt="WAKNO LABS" src="assets/uploads/1793482464622-f82f8905-685.png" width="170" height="72" decoding="async" fetchpriority="high"/></a><button aria-expanded="false" aria-label="Deschide meniul" class="menu-btn" id="menuBtn"><span class="wakno-menu-icon" aria-hidden="true"></span></button><nav aria-label="Navigare principală" class="nav" id="nav"><a href="index.html#acasa">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a href="print-dtf.html">Print DTF</a><a href="index.html#despre">Despre noi</a><a href="index.html#cum-lucram">Cum lucrăm</a><a href="index.html#clienti">Clienți</a><span aria-label="Rețele sociale" class="nav-social"><a aria-label="Instagram WAKNO LABS" href="https://www.instagram.com/wakno_lab/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.7-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"></path></svg></a><a aria-label="TikTok WAKNO LABS" href="https://www.tiktok.com/@wakno.lab" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.6 2c.2 2.2 1.5 3.7 3.8 3.9v3.4a9.2 9.2 0 0 1-4.1-1.2v6.7a7 7 0 1 1-7-7c.5 0 1 .1 1.5.2v3.7a3.5 3.5 0 1 0 1.8 3.1V2h4z"></path></svg></a></span><a class="nav-cta" href="#contact">Solicită ofertă ↗</a></nav></div></header>
 <main>
 <section class="contact" id="contact"><div class="container">
-<div class="wakno-quote-intro"><div class="eyebrow">SOLICITARE OFERTĂ / WAKNO LABS</div><h1 class="wakno-wave-title"><span class="wakno-wave-word" style="--wave-delay:0.00s">CE</span> <span class="wakno-wave-word" style="--wave-delay:0.13s">PUTEM</span> <span class="wakno-wave-word" style="--wave-delay:0.26s">FACE</span> <span class="wakno-wave-word" style="--wave-delay:0.39s">PENTRU</span> <span class="wakno-wave-word" style="--wave-delay:0.52s">TINE?</span></h1></div><form class="wakno-offer" id="waknoOfferForm" novalidate=""><h2 class="wakno-service-prompt">Alege serviciile dorite și completează detaliile.</h2>
+<div class="wakno-quote-intro"><div class="eyebrow">SOLICITARE OFERTĂ / WAKNO LABS</div><h1 class="wakno-wave-title"><span class="wakno-wave-word" style="--wave-delay:0.00s">CE</span> <span class="wakno-wave-word" style="--wave-delay:0.22s">PUTEM</span> <span class="wakno-wave-word" style="--wave-delay:0.44s">FACE</span> <span class="wakno-wave-word" style="--wave-delay:0.66s">PENTRU</span> <span class="wakno-wave-word" style="--wave-delay:0.88s">TINE?</span></h1></div><form class="wakno-offer" id="waknoOfferForm" novalidate=""><h2 class="wakno-service-prompt">Alege serviciile dorite și completează detaliile.</h2>
 <div id="waknoServiceList"><section class="wakno-service-entry" data-index="1"><div class="wakno-service-heading"><strong>Serviciul 01</strong></div><div class="wakno-service-entry-body"><label>Serviciu <span aria-hidden="true">*</span><select id="offerService" required=""><option value="">Niciun serviciu selectat</option><option>Stickere și autocolante</option><option>Flyere</option><option>Afișe / postere</option><option>Bannere</option><option>Roll-up-uri</option><option>Inscripționări vitrine și window graphics</option><option>Colantări și inscripționări auto</option><option>Textile personalizate</option><option>Tablouri canvas</option><option>Printare 3D</option><option>Litere volumetrice</option><option>Casete luminoase</option><option>Cuburi promoționale personalizate</option><option>Alt serviciu / proiect personalizat</option></select></label><fieldset class="wakno-textile-source" hidden="" id="offerTextileSource"><legend>De unde provin articolele textile? <span aria-hidden="true">*</span></legend><div class="wakno-textile-options"><label><input name="textileSource" type="radio" value="Vin cu produsele mele"/> Aduc propriile articole textile</label><label><input name="textileSource" type="radio" value="Doresc să îmi furnizați voi articolele textile"/> Doresc să îmi furnizați voi articolele textile</label></div><p>Opțiunea se aplică tricourilor, hanoracelor, gecilor, fleece-urilor, vestelor și altor textile.</p></fieldset>
 <fieldset class="wakno-sticker-options" hidden="" id="offerStickerOptions"><legend>Opțiuni pentru stickere și autocolante</legend>
 <div class="wakno-sticker-group"><strong>Tip de tăiere <span aria-hidden="true">*</span></strong><div class="wakno-sticker-choices"><label><input name="stickerCut" type="radio" value="Kiss cut (tăierea autocolantului, suport intact)"/> Kiss cut</label><label><input name="stickerCut" type="radio" value="Die cut (decupare completă pe contur)"/> Die cut / tăiate pe contur</label></div><small><b>Kiss cut:</b> suportul rămâne întreg. <b>Die cut:</b> stickerul este decupat complet pe contur.</small></div>
