@@ -521,24 +521,31 @@ body section#contact .eyebrow {
 #contact .wakno-quote-intro h1{font-size:clamp(30px,5vw,62px);line-height:1.08;letter-spacing:-.035em}
 #contact .wakno-quote-intro p{font-size:clamp(15px,1.6vw,18px);line-height:1.55}
 @media(max-width:640px){#contact{padding-top:105px}}
-</style><style>
-/* WAKNO: subtle, continuous wave on the quote-page heading */
-.wakno-wave-title .wakno-wave-word {
+</style><style id="wakno-quote-title-white-wave">
+/* Doar titlul de pe pagina Solicită ofertă; headerul și formularul nu sunt afectate. */
+#contact .wakno-quote-intro {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+#contact .wakno-quote-intro .wakno-wave-title {
+  color: #f2f3f3;
+  background: none;
+  text-align: left;
+}
+#contact .wakno-wave-title .wakno-wave-word {
   display: inline-block;
-  animation: waknoTitleWave 3.8s ease-in-out infinite;
+  color: inherit;
+  animation: waknoTitleWave 5.8s ease-in-out infinite;
   animation-delay: var(--wave-delay, 0s);
-  will-change: transform;
 }
 @keyframes waknoTitleWave {
-  0%, 12%, 42%, 100% { transform: translateY(0); }
-  24% { transform: translateY(-7px); }
-  33% { transform: translateY(2px); }
+  0%, 13%, 43%, 100% { transform: translateY(0); }
+  24% { transform: translateY(-4px); }
+  34% { transform: translateY(1px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .wakno-wave-title .wakno-wave-word {
-    animation: none;
-    will-change: auto;
-  }
+  #contact .wakno-wave-title .wakno-wave-word { animation: none; }
 }
 </style><style>
 /* Instruction immediately above service selector */
