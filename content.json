@@ -109,7 +109,9 @@
   ],
   "about": {
     "title": "IDEILE TALE PRIND VIAȚĂ.",
-    "description": "La WAKNO LABS transformăm ideile în materiale vizuale care atrag atenția. Fie că ai nevoie de un sticker, un tricou personalizat sau de o inscripționare pentru afacerea ta, pornim de la nevoile proiectului tău."
+    "description": "La WAKNO LABS transformăm ideile în materiale vizuale care atrag atenția. Fie că ai nevoie de un sticker, un tricou personalizat sau de o inscripționare pentru afacerea ta, pornim de la nevoile proiectului tău.",
+    "image": "assets/hero.webp",
+    "showImage": true
   },
   "contact": {
     "title": "HAI SĂ FACEM CEVA VIZIBIL.",
@@ -151,7 +153,7 @@
     }
   },
   "branding": {
-    "headerLogo": "assets/wakno-logo.png"
+    "headerLogo": "assets/uploads/1793482464622-f82f8905-685.png"
   },
   "businessHours": {
     "timezone": "Europe/Bucharest",
