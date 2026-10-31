@@ -245,6 +245,86 @@
   .tabs .width-tab-main,.tabs .width-tab-main * {font-size:11.5px !important}
   .tabs .width-tab{padding-inline:6px}
 }
+
+/* WAKNO LABS — corectii pentru telefon, fara schimbari in logica comenzilor */
+@media (max-width: 760px) {
+  .wrap{width:calc(100% - 32px);max-width:100%}
+  .top .wrap{min-height:76px;gap:12px}
+  .top .logo{width:min(158px,52vw);max-height:64px;height:auto}
+  .top .menu-btn{width:48px;height:48px;flex-shrink:0}
+  .intro h1{font-size:clamp(66px,16vw,105px);overflow-wrap:normal}
+  .price-panel{padding:18px 14px}
+  .price-head{gap:16px;margin-bottom:18px}
+  .price-head h2{font-size:clamp(27px,8vw,36px);line-height:1.05}
+  /* Latimile pe acelasi rand; doua randuri de text in fiecare buton */
+  .tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:5px;padding:5px;border-radius:22px}
+  .tabs .width-tab{width:100%;min-width:0;min-height:68px;padding:9px 4px;gap:4px;border-radius:17px}
+  .tabs .width-tab-main,.tabs .width-tab-main *{font-size:clamp(10px,2.95vw,12.5px)!important;line-height:1.3;white-space:normal;letter-spacing:0!important}
+  .tabs .width-tab-sub{font-size:clamp(12px,3.5vw,14px);line-height:1.2}
+  /* Tarife compacte, 2 coloane, ultimul card centrat */
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+  .price-card{min-height:124px;padding:13px 6px 0}
+  .price-card strong.request{font-size:clamp(17px,4.5vw,21px);margin-top:6px}
+  .price-card .range{font-size:14px;padding:11px 4px;margin-top:9px}
+  .cards>.price-card:last-child:nth-child(odd){grid-column:1/-1;width:calc((100% - 11px)/2);justify-self:center}
+  .note{font-size:12px;line-height:1.6}
+  .order{padding:18px 14px;gap:18px}
+  .order-content{min-width:0;width:100%}
+  .order .field input,.order textarea{max-width:none;width:100%;min-width:0}
+  .order fieldset{padding:8px 12px 16px}
+  .order .seg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .order .seg label{min-width:0}
+  .order .seg span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:50px;padding:9px 6px;font-size:clamp(11px,3.1vw,14px);line-height:1.25;white-space:normal}
+  .order .hint{font-size:12px;overflow-wrap:anywhere}
+  .order .cta{width:100%;min-height:54px;text-align:center}
+}
+@media(max-width:360px){
+  .wrap{width:calc(100% - 24px)}
+  .price-panel{padding:16px 10px}
+  .tabs .width-tab-main,.tabs .width-tab-main *{font-size:10px!important}
+  .order .seg span{font-size:11px}
+}
+
+/* Ajustari finale mobile: tip client alaturat, ultimul tarif centrat */
+@media (max-width: 760px) {
+  .order .seg {
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:8px!important;
+    width:100%;
+  }
+  .order .seg label {display:block!important;width:100%;min-width:0;box-sizing:border-box}
+  .order .seg label span {
+    display:flex!important;align-items:center;justify-content:center;
+    width:100%;min-height:54px;box-sizing:border-box;
+    padding:9px 5px!important;text-align:center;
+    font-size:clamp(11px,3vw,14px);line-height:1.25;
+    white-space:normal;overflow-wrap:normal;
+  }
+  #tiers.cards {display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:11px}
+  #tiers.cards>.price-card:last-child:nth-child(odd) {
+    grid-column:1 / -1!important;
+    width:calc((100% - 11px)/2)!important;
+    max-width:none;
+    justify-self:center!important;
+    box-sizing:border-box;
+  }
+}
+
+/* Informare dupa solicitarea Print DTF */
+.order-confirmation{margin:18px 0 8px;padding:17px 19px;border:1px solid rgba(105,181,214,.48);border-left:3px solid #69b5d6;border-radius:14px;background:linear-gradient(120deg,rgba(70,129,132,.16),rgba(10,17,19,.55));color:#e0eeee}
+.order-confirmation-title{display:flex;align-items:center;gap:10px;color:#b3e2e3;font-size:17px;line-height:1.4}
+.order-confirmation-title svg{flex:none}
+.order-confirmation p{font-size:15px;line-height:1.65;margin:10px 0 0;color:#d0dddd}
+.order-confirmation .order-confirmation-foot{font-size:14px;color:#a9cbcc;font-weight:650}
+@media(max-width:760px){.order-confirmation{padding:15px 14px;margin-top:16px}.order-confirmation-title{font-size:16px}.order-confirmation p{font-size:14.5px}}
+
+/* Previzualizare decorativa ANPC/SAL fara linkuri; NU pictograme oficiale */
+.footer .anpc-footer{display:flex;justify-content:center;align-items:center;gap:14px;margin:22px auto 0;flex-wrap:nowrap}
+.anpc-footer-link{box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:50px;width:250px;max-width:calc(50% - 7px);padding:7px 10px;border:1px solid rgba(117,190,193,.25);border-radius:5px;background:rgba(12,20,22,.5);color:#cdd7d8;text-align:center;text-decoration:none;font-size:10px;line-height:1.25;transition:border-color .2s,background .2s}
+
+.anpc-footer-kicker{font-size:10px;letter-spacing:.7px;font-weight:700;color:#83d5d7}
+@media(max-width:520px){.footer .anpc-footer{gap:8px}.anpc-footer-link{max-width:calc(50% - 4px);padding:7px 5px;font-size:9px}.anpc-footer-kicker{font-size:9px;letter-spacing:.2px}}
 </style></head><body><div class="ambient" aria-hidden="true"><video autoplay muted loop playsinline preload="none"><source src="assets/ambient-loop.mp4" type="video/mp4"></video></div><header class="top"><div class="wrap"><a href="index.html" aria-label="WAKNO LABS Acasă"><img id="logo" class="logo" src="assets/wakno-logo.png" alt="WAKNO LABS" width="170" height="84"></a><button class="menu-btn" id="menuBtn" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav">☰</button><nav class="nav" id="nav" aria-label="Navigare principală"><a href="index.html">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a href="print-dtf.html" aria-current="page">Print DTF</a><a href="index.html#contact">Contact</a></nav></div></header><main class="wrap"><section class="intro"><div class="eyebrow">WAKNO LABS / PERSONALIZARE TEXTILE</div><h1 id="dtfTitle">PRINT <span>DTF.</span></h1><p id="dtfSubtitle">Transferuri DTF pentru textile. Selectează lățimea și lungimea, apoi trimite solicitarea pe email.</p><div class="promo" id="promo" hidden></div><p class="availability" id="availability" hidden>Comenzile DTF sunt momentan indisponibile.</p></section><details class="glass about" id="ce-este-dtf"><summary><h2 class="sum-title">Ce este printul DTF?</h2><span class="sum-btn" aria-hidden="true"><span class="when-closed">Află mai multe</span><span class="when-open">Închide</span></span></summary>
 <div class="about-body">
 <p class="lead">Printul DTF (Direct-to-Film) este o tehnologie modernă de personalizare textilă care implică imprimarea digitală a designului pe o folie PET specială, urmată de aplicarea unei pudre adezive termice și transferul final pe material prin presă termică. Această metodă permite obținerea unor imprimeuri cu culori vibrante, detalii precise și alb opac, fiind compatibilă cu o gamă largă de materiale, inclusiv bumbac, poliester, amestecuri și piele ecologică, fără a necesita tratament prealabil al țesăturii.</p>
@@ -281,9 +361,14 @@
 </fieldset>
 <div class="field"><label for="notes">Observații <span class="opt">(opțional)</span></label><textarea id="notes" rows="3" maxlength="400" aria-describedby="e-notes"></textarea><small class="err" id="e-notes" hidden></small></div>
 <a id="send" class="cta" href="mailto:waknolab@gmail.com?subject=Comand%C4%83%20Print%20DTF">TRIMITE COMANDA <span aria-hidden="true">↗</span></a>
+<aside class="order-confirmation" aria-label="Ce se întâmplă după trimiterea comenzii?">
+  <div class="order-confirmation-title"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5h6M9 12l2 2 4-4"/></svg><strong>Ce se întâmplă după trimiterea comenzii?</strong></div>
+  <p>După primirea solicitării, vom analiza detaliile comenzii și fișierele grafice transmise. Vei primi o confirmare din partea noastră, împreună cu informațiile privind prețul final și termenul estimat de execuție.</p>
+  <p class="order-confirmation-foot">Comanda intră în procesare doar după confirmarea detaliilor.</p>
+</aside>
 <p class="note" id="sendMsg" role="status" aria-live="polite">Se deschide aplicația ta de email, cu mesajul completat. Verifică-l și apasă Trimite. Datele introduse nu sunt salvate pe site, ajung doar în emailul pe care îl trimiți tu.</p>
 <p class="note alt" id="alt">Nu se deschide emailul? <a id="gmail" href="https://mail.google.com/mail/" target="_blank" rel="noopener noreferrer">Deschide în Gmail</a> sau <button type="button" id="copy" class="link-btn">copiază mesajul</button>.</p>
-</div></section></main><footer class="footer"><div class="wrap"><span>© 2026 WAKNO LABS. Toate drepturile rezervate.</span><span>CONCEPT TO CRAFT.</span></div></footer><script>
+</div></section></main><footer class="footer"><div class="wrap"><span>© 2026 WAKNO LABS. Toate drepturile rezervate.</span><span>CONCEPT TO CRAFT.</span></div><div class="wrap anpc-footer"><div class="anpc-footer-link" role="img" aria-label="ANPC – Soluționarea Alternativă a Litigiilor"><span class="anpc-footer-kicker">ANPC · SAL</span><span>Soluționarea alternativă a litigiilor <span aria-hidden="true"></span></span></div><div class="anpc-footer-link" role="img" aria-label="ANPC România"><span class="anpc-footer-kicker">PROTECȚIA CONSUMATORILOR</span><span>ANPC România <span aria-hidden="true"></span></span></div></div></footer><script>
 (()=>{'use strict';let cfg={email:'waknolab@gmail.com',available:true,widths:[{label:'Rolă 90 cm',widthCm:90,printableCm:87,tiers:[]},{label:'Rolă 60 cm',widthCm:60,printableCm:57,tiers:[]}]},current=0;const $=id=>document.getElementById(id),safeAsset=s=>typeof s==='string'&&/^assets\/[a-z0-9_./-]+$/i.test(s)&&!s.includes('..');const money=n=>typeof n==='number'&&Number.isFinite(n)?new Intl.NumberFormat('ro-RO',{maximumFractionDigits:2}).format(n):null;const menu=$('menuBtn'),nav=$('nav');function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Deschide meniul');menu.textContent='☰';document.body.style.overflow=''}menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Închide meniul':'Deschide meniul');menu.textContent=open?'✕':'☰';document.body.style.overflow=open?'hidden':''});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});function draw(){const tabs=$('widthTabs');tabs.replaceChildren();(cfg.widths||[]).forEach((w,i)=>{const b=document.createElement('button');b.className='width-tab';const main=document.createElement('span');main.className='width-tab-main';main.textContent=w.widthCm+' cm ('+w.printableCm+' cm printabil)';const sub=document.createElement('span');sub.className='width-tab-sub';sub.textContent=Number(w.widthCm)===90?'Recomandăm':Number(w.widthCm)===60?'La cerere':'';b.append(main,sub);b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-selected',String(i===current));b.setAttribute('aria-controls','tiers');b.tabIndex=i===current?0:-1;b.onclick=()=>{current=i;draw()};b.onkeydown=e=>{const n=(cfg.widths||[]).length;let j=null;if(e.key==='ArrowRight')j=(i+1)%n;else if(e.key==='ArrowLeft')j=(i-1+n)%n;else if(e.key==='Home')j=0;else if(e.key==='End')j=n-1;if(j!==null){e.preventDefault();current=j;draw();tabs.children[j].focus()}};tabs.append(b)});const w=cfg.widths?.[current];if(!w)return;$('printable').textContent='Lățime totală: '+w.widthCm+' cm · Lățime printabilă: '+w.printableCm+' cm';const list=$('tiers');list.replaceChildren();for(const t of (Array.isArray(w.tiers)&&w.tiers.length?w.tiers:[{min:1,max:5,price:null},{min:5,max:30,price:null},{min:30,max:80,price:null},{min:80,max:150,price:null},{min:150,max:null,price:null}])){const card=document.createElement('article');card.className='price-card';const top=document.createElement('div');const price=document.createElement('strong');const val=money(t.price);price.textContent=val||'La cerere';if(!val)price.classList.add('request');top.append(price);if(val){const unit=document.createElement('small');unit.textContent='lei/ml';top.append(unit)}const range=document.createElement('div');range.className='range';range.textContent=t.max==null?'Peste '+t.min+' ml':t.min+'–'+t.max+' ml';card.append(top,range);list.append(card)}updateLink()}function animateDtfTitle(){const h=$('dtfTitle');if(!h||h.querySelector('.dtf-cmyk'))return;const base=h.querySelector('span');if(!base||base.textContent.trim().toUpperCase()!=='DTF.')return;const word=document.createElement('span');word.className='dtf-cmyk';word.setAttribute('aria-label','DTF.');const colors=['#00cdec','#ed008e','#ffdf00','#dfdfdc'],tilts=['-12deg','9deg','-8deg','11deg'];[...'DTF.'].forEach((ch,i)=>{const letter=document.createElement('span');letter.textContent=ch;letter.setAttribute('aria-hidden','true');letter.dataset.char=ch;letter.style.setProperty('--i',i);letter.style.setProperty('--tilt',tilts[i]);letter.style.setProperty('--ink',colors[i]);word.append(letter)});base.replaceWith(word);if(!window.matchMedia||!matchMedia('(prefers-reduced-motion: reduce)').matches)word.classList.add('play')}animateDtfTitle();const FIELDS={fizica:[['fName','Nume și prenume',1],['fPhone','Telefon',1],['fAddr','Adresă',0]],juridica:[['jName','Denumire firmă',1],['jCui','CUI / CIF',1],['jContact','Persoană de contact',0],['jPhone','Telefon',1]]};
 const nf=n=>new Intl.NumberFormat('ro-RO',{maximumFractionDigits:2}).format(n),enc=encodeURIComponent,val=id=>($(id).value||'').trim().replace(/\s+/g,' '),ctype=()=>document.querySelector('input[name=ctype]:checked')?.value==='juridica'?'juridica':'fizica';
 function normLink(v){if(!v)return '';if(!/^[a-z][a-z0-9+.-]*:/i.test(v))v='https://'+v;try{const u=new URL(v);return(u.protocol==='https:'||u.protocol==='http:')&&u.hostname.includes('.')?u.href:null}catch(e){return null}}
