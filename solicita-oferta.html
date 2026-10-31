@@ -670,7 +670,49 @@ body.wakno-offer-complete .wakno-new-request:focus-visible{outline:2px solid #b2
 #wakno-confirmation-screen{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;overflow:auto;padding:24px;box-sizing:border-box;background:radial-gradient(ellipse at 50% 40%,#102b2c 0%,#080b0d 64%)}
 #wakno-confirmation-screen #waknoSubmissionNotice{display:flex!important;box-sizing:border-box;max-width:560px;margin:auto!important;position:relative!important;visibility:visible!important;opacity:1!important}
 </style>
-</head><body><div aria-hidden="true" class="ambient-background"><video autoplay="" loop="" muted="" playsinline="" preload="metadata" src="assets/ambient-loop.mp4"></video></div>
+
+<style id="wakno-unified-success-style">
+#wakno-unified-success{position:fixed!important;inset:0!important;z-index:2147483647!important;display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box;min-height:100dvh;overflow-y:auto;padding:36px 18px;background:radial-gradient(ellipse at 43% 65%,rgba(98,21,41,.45),transparent 44%),radial-gradient(ellipse at 62% 12%,rgba(33,17,75,.38),transparent 45%),#050608;color:#fff;text-align:center;font-family:Inter,Arial,sans-serif}
+#wakno-unified-success .wakno-success-inner{width:min(700px,100%);margin:auto}
+#wakno-unified-success .wakno-success-check{font-size:64px;line-height:1;color:#86cdd1;font-weight:400;margin-bottom:37px}
+#wakno-unified-success h1{font:750 clamp(36px,6.8vw,58px)/1.12 Inter,Arial,sans-serif;letter-spacing:-.025em;margin:0 auto 36px;max-width:650px;color:#fff}
+#wakno-unified-success p{font-size:clamp(16px,2.5vw,19px);line-height:1.65;color:#d0d0d4;margin:0 auto 34px;max-width:680px}
+#wakno-unified-success .wakno-success-actions{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}
+#wakno-unified-success .wakno-success-action{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:15px 26px;border-radius:999px;border:1px solid #8cc9e3;background:#609fc5;color:#fff;text-decoration:none;font:800 15px/1.2 Inter,Arial,sans-serif;cursor:pointer;transition:background .2s,transform .2s}
+#wakno-unified-success .wakno-success-action:hover{background:#78b5d7;transform:translateY(-2px)}
+#wakno-unified-success .wakno-success-action.home{background:transparent;border-color:#78b5d7}
+#wakno-unified-success .wakno-success-action.home:hover{background:rgba(96,159,197,.17)}
+#wakno-unified-success .wakno-success-action:focus-visible{outline:3px solid #fff;outline-offset:4px}
+@media(max-width:460px){#wakno-unified-success .wakno-success-check{margin-bottom:27px}#wakno-unified-success h1{margin-bottom:26px}#wakno-unified-success .wakno-success-actions{flex-direction:column}#wakno-unified-success .wakno-success-action{width:min(310px,100%)}}
+@media(prefers-reduced-motion:reduce){#wakno-unified-success .wakno-success-action{transition:none}}
+</style>
+<style id="wakno-matching-submit-buttons">
+/* Aceeasi identitate vizuala pentru trimitere, pe ambele formulare */
+.wakno-offer-send, .order #send.cta{
+  position:relative!important;isolation:isolate;overflow:hidden;
+  display:inline-flex!important;align-items:center;justify-content:center;
+  gap:15px!important;min-height:62px!important;padding:18px 29px!important;
+  border:1px solid transparent!important;border-radius:999px!important;
+  background:#050607!important;color:#fff!important;
+  font:800 15px/1.3 Inter,Arial,sans-serif!important;letter-spacing:.015em!important;
+  text-decoration:none!important;box-shadow:0 0 17px rgba(70,129,132,.18)!important;
+  transform:none;transition:box-shadow .2s ease,transform .2s ease!important;
+}
+.wakno-offer-send::before, .order #send.cta::before{
+  content:"";position:absolute;inset:-240%;z-index:-2;pointer-events:none;
+  background:conic-gradient(transparent 0deg,transparent 185deg,#26dbe8 225deg,#a25dff 265deg,#ee4cce 300deg,transparent 345deg);
+  animation:waknoMatchingBorder 3.3s linear infinite;
+}
+.wakno-offer-send::after, .order #send.cta::after{
+  content:"";position:absolute;inset:1.5px;z-index:-1;pointer-events:none;
+  border-radius:inherit;background:#050607;
+}
+.wakno-offer-send:hover, .order #send.cta:hover{box-shadow:0 0 22px rgba(129,96,213,.35)!important;transform:translateY(-2px)!important}
+.wakno-offer-send:focus-visible, .order #send.cta:focus-visible{outline:3px solid #a9dadd;outline-offset:4px}
+@keyframes waknoMatchingBorder{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.wakno-offer-send::before,.order #send.cta::before{animation:none}}
+@media(max-width:760px){.wakno-offer-send,.order #send.cta{min-height:60px!important;font-size:14px!important;padding:17px 22px!important}}
+</style></head><body><div aria-hidden="true" class="ambient-background"><video autoplay="" loop="" muted="" playsinline="" preload="metadata" src="assets/ambient-loop.mp4"></video></div>
 <header class="topbar"><div class="container navrow"><a aria-label="WAKNO LABS — Acasă" class="logo" href="index.html"><img alt="WAKNO LABS" src="assets/wakno-logo.png"/></a><button aria-expanded="false" aria-label="Deschide meniul" class="menu-btn" id="menuBtn">☰</button><nav aria-label="Navigare principală" class="nav" id="nav"><a href="index.html#acasa">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a href="print-dtf.html">Print DTF</a><a href="index.html#despre">Despre noi</a><a href="index.html#cum-lucram">Cum lucrăm</a><a href="index.html#clienti">Clienți</a><span aria-label="Rețele sociale" class="nav-social"><a aria-label="Instagram WAKNO LABS" href="https://www.instagram.com/wakno_lab/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.7-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"></path></svg></a><a aria-label="TikTok WAKNO LABS" href="https://www.tiktok.com/@wakno.lab" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.6 2c.2 2.2 1.5 3.7 3.8 3.9v3.4a9.2 9.2 0 0 1-4.1-1.2v6.7a7 7 0 1 1-7-7c.5 0 1 .1 1.5.2v3.7a3.5 3.5 0 1 0 1.8 3.1V2h4z"></path></svg></a></span><a class="nav-cta" href="#contact">Solicită ofertă ↗</a></nav></div></header>
 <main>
 <section class="contact" id="contact"><div class="container">
@@ -845,7 +887,21 @@ const a=data.analytics?.cloudflareToken;if(typeof a==='string'&&/^[a-zA-Z0-9_-]{
 }).catch(()=>{});
 })();
 </script>
-<script>document.addEventListener('DOMContentLoaded',()=>{const m=document.getElementById('menuBtn'),n=document.getElementById('nav');if(!m||!n)return;const sync=()=>{document.body.classList.toggle('wakno-menu-open',n.classList.contains('open'));m.setAttribute('aria-label',n.classList.contains('open')?'Închide meniul':'Deschide meniul')};m.addEventListener('click',()=>setTimeout(sync,0));n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{document.body.classList.remove('wakno-menu-open');m.textContent='☰'}));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&n.classList.contains('open'))m.click()})});</script><script id="wakno-info-runtime">(()=>{const tz='Europe/Bucharest';let prev='';function updateDate(){const now=new Date();const dateParts=new Intl.DateTimeFormat('ro-RO',{timeZone:tz,weekday:'long',day:'numeric',month:'long',year:'numeric'}).formatToParts(now);const part=k=>dateParts.find(x=>x.type===k)?.value||'';const key=part('day')+part('month')+part('year');if(key===prev)return;prev=key;document.getElementById('waknoWeekday').textContent=part('weekday');document.getElementById('waknoDay').textContent=part('day');document.getElementById('waknoMonthYear').textContent=part('month')+' '+part('year');}updateDate();setInterval(updateDate,60000);fetch('./content.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(!d)return;const b=d.businessHours||{};document.getElementById('waknoWeekHours').textContent=(b.weekdays||'Luni–Vineri')+' · '+(b.weekdayHours||'09:00–16:00');document.getElementById('waknoWeekend').textContent=b.weekend||'Sâmbătă–Duminică: închis';const a=d.announcements||{};if(!a.enabled||!a.message)return;const today=new Intl.DateTimeFormat('sv-SE',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());if(a.startDate&&today<a.startDate||a.endDate&&today>a.endDate)return;const node=document.getElementById('waknoAnnouncement');node.textContent=a.message;node.dataset.type=a.type||'informare';node.hidden=false;}).catch(()=>{});})();</script><script id="wakno-offer-script">(()=>{
+<script>document.addEventListener('DOMContentLoaded',()=>{const m=document.getElementById('menuBtn'),n=document.getElementById('nav');if(!m||!n)return;const sync=()=>{document.body.classList.toggle('wakno-menu-open',n.classList.contains('open'));m.setAttribute('aria-label',n.classList.contains('open')?'Închide meniul':'Deschide meniul')};m.addEventListener('click',()=>setTimeout(sync,0));n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{document.body.classList.remove('wakno-menu-open');m.textContent='☰'}));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&n.classList.contains('open'))m.click()})});</script><script id="wakno-info-runtime">(()=>{const tz='Europe/Bucharest';let prev='';function updateDate(){const now=new Date();const dateParts=new Intl.DateTimeFormat('ro-RO',{timeZone:tz,weekday:'long',day:'numeric',month:'long',year:'numeric'}).formatToParts(now);const part=k=>dateParts.find(x=>x.type===k)?.value||'';const key=part('day')+part('month')+part('year');if(key===prev)return;prev=key;document.getElementById('waknoWeekday').textContent=part('weekday');document.getElementById('waknoDay').textContent=part('day');document.getElementById('waknoMonthYear').textContent=part('month')+' '+part('year');}updateDate();setInterval(updateDate,60000);fetch('./content.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(!d)return;const b=d.businessHours||{};document.getElementById('waknoWeekHours').textContent=(b.weekdays||'Luni–Vineri')+' · '+(b.weekdayHours||'09:00–16:00');document.getElementById('waknoWeekend').textContent=b.weekend||'Sâmbătă–Duminică: închis';const a=d.announcements||{};if(!a.enabled||!a.message)return;const today=new Intl.DateTimeFormat('sv-SE',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());if(a.startDate&&today<a.startDate||a.endDate&&today>a.endDate)return;const node=document.getElementById('waknoAnnouncement');node.textContent=a.message;node.dataset.type=a.type||'informare';node.hidden=false;}).catch(()=>{});})();</script><script id="wakno-offer-script">
+function waknoShowUnifiedSuccess(isDtf){
+  const old=document.getElementById('wakno-unified-success');if(old)old.remove();
+  const screen=document.createElement('section');screen.id='wakno-unified-success';screen.setAttribute('role','status');screen.setAttribute('aria-live','polite');
+  const inner=document.createElement('div');inner.className='wakno-success-inner';
+  const check=document.createElement('div');check.className='wakno-success-check';check.setAttribute('aria-hidden','true');check.textContent='✓';
+  const title=document.createElement('h1');title.textContent='Solicitarea a fost trimisă!';
+  const desc=document.createElement('p');desc.textContent=isDtf?'Îți mulțumim! Am primit solicitarea pentru Print DTF. Vei primi și un email de confirmare.':'Îți mulțumim! Am primit solicitarea ta de ofertă. Vei primi și un email de confirmare.';
+  const actions=document.createElement('div');actions.className='wakno-success-actions';
+  const again=document.createElement('button');again.type='button';again.className='wakno-success-action';again.textContent='SOLICITARE NOUĂ ↗';again.addEventListener('click',()=>window.location.reload());
+  const home=document.createElement('a');home.href='index.html';home.className='wakno-success-action home';home.textContent='⌂  HOME';
+  actions.append(again,home);inner.append(check,title,desc,actions);screen.append(inner);document.body.append(screen);
+  document.body.style.overflow='';window.scrollTo(0,0);
+}
+(()=>{
 const form=document.getElementById('waknoOfferForm'),list=document.getElementById('waknoServiceList'),add=document.getElementById('waknoAddService');if(!form||!list)return;
 let offerSettings={};
 const template=list.querySelector('.wakno-service-entry').cloneNode(true);let nextIndex=1;let recipient='waknolab@gmail.com';
@@ -1116,15 +1172,7 @@ form.addEventListener('submit',async e=>{e.preventDefault();
   if(notice)notice.hidden=false;
   document.body.classList.add('wakno-offer-complete');
   window.scrollTo({top:0,behavior:'instant'});
-  if(notice){
-   notice.hidden=false;notice.className='wakno-submission-notice';notice.replaceChildren();
-   const check=document.createElement('span');check.className='wakno-submission-check';check.setAttribute('aria-hidden','true');check.textContent='✓';
-   const title=document.createElement('strong');title.textContent='Solicitarea a fost trimisă!';
-   const desc=document.createElement('span');desc.textContent='Îți mulțumim că ai ales WAKNO LABS! Am primit solicitarea și vom reveni cu un răspuns în cel mai scurt timp.';
-   notice.append(check,title,desc);
-   const again=document.createElement('button');again.type='button';again.className='wakno-new-request';again.textContent='SOLICITARE NOUĂ ↗';again.addEventListener('click',()=>window.location.reload());notice.append(again);
-   const screen=document.createElement('div');screen.id='wakno-confirmation-screen';screen.setAttribute('role','status');screen.append(notice);document.body.append(screen);
-  }
+   waknoShowUnifiedSuccess(false);
  }catch(err){
   if(notice){notice.className='wakno-submission-notice wakno-submission-warning';notice.textContent='Solicitarea nu a fost trimisă. '+(err?.message||'Verifică conexiunea și încearcă din nou.');}
  }finally{sendButton.disabled=false;if(notice)notice.scrollIntoView({behavior:'smooth',block:'center'});}
@@ -1353,4 +1401,8 @@ document.getElementById('offerPhone').addEventListener('input',e=>e.target.setCu
   #waknoOfferForm .wakno-banner-options .wakno-sticker-choices > label {padding:13px 6px 10px !important;}
   #waknoOfferForm .wakno-banner-options .wakno-sticker-choices > label > .wakno-banner-option-name {font-size:12px !important;}
 }
+
+/* WAKNO LABS: gri industrial, animatiile CMYK raman neschimbate */
+.wakno-offer-send::after,.btn::after,.nav-cta::after,.social-links a::after,.service .arrow::after{background:#151c1e!important}
+.wakno-offer-send,.btn,.btn-primary,.nav-cta,.social-links a,.service .arrow{background-color:#151c1e!important}
 </style></body></html>
