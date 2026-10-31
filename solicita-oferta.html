@@ -667,6 +667,8 @@ body.wakno-offer-complete #waknoSubmissionNotice span:not(.wakno-submission-chec
 body.wakno-offer-complete .wakno-new-request{margin-top:12px;min-height:54px;padding:15px 27px;border-radius:999px;border:1px solid #79d7d9;background:#11282a;color:#f4ffff;font:700 14px Inter,Arial,sans-serif;letter-spacing:.04em;cursor:pointer}
 body.wakno-offer-complete .wakno-new-request:hover{background:#1d4244}
 body.wakno-offer-complete .wakno-new-request:focus-visible{outline:2px solid #b2ffff;outline-offset:4px}
+#wakno-confirmation-screen{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;overflow:auto;padding:24px;box-sizing:border-box;background:radial-gradient(ellipse at 50% 40%,#102b2c 0%,#080b0d 64%)}
+#wakno-confirmation-screen #waknoSubmissionNotice{display:flex!important;box-sizing:border-box;max-width:560px;margin:auto!important;position:relative!important;visibility:visible!important;opacity:1!important}
 </style>
 </head><body><div aria-hidden="true" class="ambient-background"><video autoplay="" loop="" muted="" playsinline="" preload="metadata" src="assets/ambient-loop.mp4"></video></div>
 <header class="topbar"><div class="container navrow"><a aria-label="WAKNO LABS — Acasă" class="logo" href="index.html"><img alt="WAKNO LABS" src="assets/wakno-logo.png"/></a><button aria-expanded="false" aria-label="Deschide meniul" class="menu-btn" id="menuBtn">☰</button><nav aria-label="Navigare principală" class="nav" id="nav"><a href="index.html#acasa">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a href="print-dtf.html">Print DTF</a><a href="index.html#despre">Despre noi</a><a href="index.html#cum-lucram">Cum lucrăm</a><a href="index.html#clienti">Clienți</a><span aria-label="Rețele sociale" class="nav-social"><a aria-label="Instagram WAKNO LABS" href="https://www.instagram.com/wakno_lab/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.7-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"></path></svg></a><a aria-label="TikTok WAKNO LABS" href="https://www.tiktok.com/@wakno.lab" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.6 2c.2 2.2 1.5 3.7 3.8 3.9v3.4a9.2 9.2 0 0 1-4.1-1.2v6.7a7 7 0 1 1-7-7c.5 0 1 .1 1.5.2v3.7a3.5 3.5 0 1 0 1.8 3.1V2h4z"></path></svg></a></span><a class="nav-cta" href="#contact">Solicită ofertă ↗</a></nav></div></header>
@@ -1111,15 +1113,17 @@ form.addEventListener('submit',async e=>{e.preventDefault();
   });
   let result={};try{result=await response.json()}catch{}
   if(!response.ok||!result.ok)throw Error(result.error||'Trimiterea a eșuat. Încearcă din nou.');
+  if(notice)notice.hidden=false;
   document.body.classList.add('wakno-offer-complete');
   window.scrollTo({top:0,behavior:'instant'});
   if(notice){
-   notice.className='wakno-submission-notice';notice.replaceChildren();
+   notice.hidden=false;notice.className='wakno-submission-notice';notice.replaceChildren();
    const check=document.createElement('span');check.className='wakno-submission-check';check.setAttribute('aria-hidden','true');check.textContent='✓';
    const title=document.createElement('strong');title.textContent='Solicitarea a fost trimisă!';
    const desc=document.createElement('span');desc.textContent='Îți mulțumim că ai ales WAKNO LABS! Am primit solicitarea și vom reveni cu un răspuns în cel mai scurt timp.';
    notice.append(check,title,desc);
    const again=document.createElement('button');again.type='button';again.className='wakno-new-request';again.textContent='SOLICITARE NOUĂ ↗';again.addEventListener('click',()=>window.location.reload());notice.append(again);
+   const screen=document.createElement('div');screen.id='wakno-confirmation-screen';screen.setAttribute('role','status');screen.append(notice);document.body.append(screen);
   }
  }catch(err){
   if(notice){notice.className='wakno-submission-notice wakno-submission-warning';notice.textContent='Solicitarea nu a fost trimisă. '+(err?.message||'Verifică conexiunea și încearcă din nou.');}
