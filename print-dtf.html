@@ -377,103 +377,148 @@
 /* WAKNO LABS: gri industrial, fara schimbarea animatiei CMYK */
 .order #send.cta::after,.price-card::after{background:#151c1e!important}
 .order #send.cta{background:#151c1e!important}
-</style><style id="wakno-dtf-mobile-menu-fix">
-@media(max-width:720px){
- #menuBtn.menu-btn{width:52px!important;height:52px!important;min-width:52px!important;display:grid!important;place-items:center!important;padding:0!important;line-height:1!important;font-size:0!important;background:#151c1e!important;border:1px solid #ffffff55!important;border-radius:12px!important;cursor:pointer}
- #menuBtn.menu-btn::after{content:none!important;display:none!important}
- #menuBtn .wakno-menu-icon{display:block!important;position:relative;width:26px;height:26px;flex:none;background:linear-gradient(#fff,#fff) center 5px/26px 2.5px no-repeat,linear-gradient(#fff,#fff) center 12px/26px 2.5px no-repeat,linear-gradient(#fff,#fff) center 19px/26px 2.5px no-repeat}
- #menuBtn[aria-expanded="true"] .wakno-menu-icon{background:none}
- #menuBtn[aria-expanded="true"] .wakno-menu-icon::before,#menuBtn[aria-expanded="true"] .wakno-menu-icon::after{content:"";position:absolute;top:12px;left:0;width:26px;height:2.5px;border-radius:2px;background:#fff;transform-origin:center}
- #menuBtn[aria-expanded="true"] .wakno-menu-icon::before{transform:rotate(45deg)}
- #menuBtn[aria-expanded="true"] .wakno-menu-icon::after{transform:rotate(-45deg)}
- .order,.order *,main,main *{min-width:0}
- .order p,.order small,.order label,.order .hint{overflow-wrap:break-word}
-}
-</style><style>
-/* WAKNO LABS: header si navigare unificate */
-@media(min-width:761px){
- .topbar .navrow,.top .wrap{min-height:92px!important;gap:20px!important}
- .topbar .logo img,.top .logo{width:190px!important;height:78px!important;max-height:78px!important;object-fit:contain!important;object-position:left center!important}
- .topbar .nav,.top .nav{display:flex!important;align-items:center!important;gap:clamp(9px,1.15vw,22px)!important}
- .topbar .nav>a:not(.nav-cta),.top .nav>a:not(.nav-cta){font-size:11px!important;font-weight:700!important;letter-spacing:.045em!important;white-space:nowrap!important;text-transform:uppercase!important}
- .topbar .nav-cta,.top .nav-cta{font-size:11px!important;white-space:nowrap!important;padding:12px 18px!important}
-}
-@media(max-width:760px){
- .topbar .logo img,.top .logo{width:165px!important;height:70px!important;max-height:70px!important;object-fit:contain!important}
- .topbar .nav>a:not(.nav-cta),.top .nav>a:not(.nav-cta){font-size:clamp(22px,6vw,30px)!important;font-weight:800!important;letter-spacing:.015em!important;line-height:1.35!important;text-transform:uppercase!important}
- .topbar .nav-cta,.top .nav-cta{display:flex!important;justify-content:center!important;align-items:center!important;min-height:54px!important;font-size:13px!important;letter-spacing:.06em!important}
- .topbar .menu-btn,.top .menu-btn{width:50px!important;height:50px!important;flex:0 0 50px!important;border:1px solid #ffffff55!important;border-radius:13px!important;background:#151c1e!important;display:grid!important;place-items:center!important;padding:0!important}
-}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link rel="preload" as="image" href="assets/uploads/1793482464622-f82f8905-685.png" fetchpriority="high"/>
 
-.top .nav-social{display:flex;gap:17px;align-items:center}
-.top .nav-social a{font-size:20px!important;line-height:1!important}
-.top .nav-cta{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;background:#151c1e!important;color:#fff!important;border:1px solid transparent!important;border-radius:999px;padding:12px 18px;text-decoration:none;font-weight:750}
-.top .nav-cta:before{content:"";position:absolute;inset:-180%;z-index:-2;background:conic-gradient(#00e5ff,#e600ff,#ffff00,#00e5ff);animation:waknoNavSpin 3.2s linear infinite}
-.top .nav-cta:after{content:"";position:absolute;inset:1.5px;z-index:-1;background:#151c1e;border-radius:inherit}
-@keyframes waknoNavSpin{to{transform:rotate(360deg)}}
-@media(max-width:760px){.top .nav-social{justify-content:flex-start;padding:12px 0}.top .nav-cta{width:100%!important}}
-</style><style>
-/* WAKNO LABS — CTA meniu identic cu pagina Acasă */
-.top .nav .nav-cta{position:relative!important;isolation:isolate!important;overflow:hidden!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;background:#151c1e!important;color:#fff!important;border:0!important;border-radius:999px!important;padding:12px 18px!important;min-height:42px!important;font-size:11px!important;font-weight:800!important;letter-spacing:.02em!important;text-decoration:none!important;white-space:nowrap!important;transition:transform .2s,box-shadow .2s!important}
-.top .nav .nav-cta::before{content:""!important;position:absolute!important;z-index:-2!important;inset:-180%!important;border:0!important;border-radius:0!important;background:conic-gradient(from 0deg,transparent 0deg,transparent 205deg,#31e9e4 250deg,#ffffff 270deg,#7282ff 295deg,#ed5bd6 320deg,transparent 350deg)!important;animation:waknoHomeCtaSpin 3.2s linear infinite!important;transform-origin:center!important}
-.top .nav .nav-cta::after{content:""!important;position:absolute!important;z-index:-1!important;inset:1.5px!important;border-radius:inherit!important;background:#050505!important}
-.top .nav .nav-cta:hover{transform:translateY(-2px)!important;box-shadow:0 0 18px #39e7e380,0 0 34px #6b7dff42,0 0 45px #e55bdc25!important}
-@keyframes waknoHomeCtaSpin{to{transform:rotate(360deg)}}
-@media(max-width:950px){.top .nav .nav-cta{width:100%!important;min-height:54px!important;margin:14px 0!important;font-size:13px!important}}
-@media(prefers-reduced-motion:reduce){.top .nav .nav-cta::before{animation:none!important}}
-</style><style id="wakno-cta-uniform-20261031">
-/* CTA uniform: fundal gri industrial si animatie ca pe Acasa */
-.nav-cta,.top .nav-cta,.topbar .nav-cta{position:relative!important;isolation:isolate!important;overflow:hidden!important;display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent!important;border-radius:999px!important;background:#151c1e!important;color:#fff!important;box-shadow:0 0 15px #46818420!important;transition:transform .2s,box-shadow .25s!important;text-decoration:none!important}
-.nav-cta::before,.top .nav-cta::before,.topbar .nav-cta::before{content:""!important;position:absolute!important;z-index:-2!important;inset:-180%!important;background:conic-gradient(from 0deg,transparent 0deg,transparent 205deg,#31e9e4 250deg,#ffffff 270deg,#7282ff 295deg,#ed5bd6 320deg,transparent 350deg)!important;animation:waknoCtaUnifiedSpin 3.2s linear infinite!important;pointer-events:none!important}
-.nav-cta::after,.top .nav-cta::after,.topbar .nav-cta::after{content:""!important;position:absolute!important;z-index:-1!important;inset:1.5px!important;border-radius:inherit!important;background:#151c1e!important;pointer-events:none!important}
-.nav-cta:hover,.top .nav-cta:hover,.topbar .nav-cta:hover{transform:translateY(-2px);box-shadow:0 5px 22px #46818445!important}
-@keyframes waknoCtaUnifiedSpin{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){.nav-cta::before,.top .nav-cta::before,.topbar .nav-cta::before{animation:none!important}}
+
+<style id="wakno-header-20261101">
+/* WAKNO LABS | header comun - 2026-11-01
+   Acest bloc este IDENTIC pe toate cele patru pagini. Restul paginilor ramane nemodificat. */
+:root{--wakno-heading-font:Roboto,Arial,sans-serif;--wakno-body-font:Montserrat,Arial,sans-serif;--wakno-menu-font:Roboto,Arial,sans-serif;--wakno-heading-size:75px;--wakno-body-size:20px;--wakno-menu-size-mobile:32px;--wakno-hdr-h:84px;--wakno-hdr-width:1480px;--wakno-hdr-gutter:24px;--wakno-logo-width:170px;--wakno-logo-height:72px}
+body>header.wakno-header{
+  box-sizing:border-box!important;position:sticky!important;top:0!important;left:0!important;right:0!important;
+  display:block!important;width:100%!important;max-width:none!important;height:auto!important;min-height:0!important;
+  margin:0!important;padding:0!important;transform:none!important;overflow:visible!important;z-index:500!important;
+  background:rgba(10,12,13,.96)!important;border-bottom:1px solid rgba(255,255,255,.12)!important;
+  -webkit-backdrop-filter:blur(14px)!important;backdrop-filter:blur(14px)!important;
+}
+body>header.wakno-header>.wakno-header-inner{
+  box-sizing:border-box!important;position:relative!important;display:flex!important;flex-wrap:nowrap!important;
+  align-items:center!important;justify-content:space-between!important;gap:20px!important;
+  width:calc(100% - 2 * var(--wakno-hdr-gutter))!important;max-width:var(--wakno-hdr-width)!important;
+  height:var(--wakno-hdr-h)!important;min-height:var(--wakno-hdr-h)!important;
+  margin:0 auto!important;padding:0!important;transform:none!important;
+}
+body>header.wakno-header .wakno-logo{
+  box-sizing:border-box!important;display:flex!important;flex:0 0 var(--wakno-logo-width)!important;
+  align-items:center!important;justify-content:flex-start!important;
+  width:var(--wakno-logo-width)!important;min-width:var(--wakno-logo-width)!important;
+  height:var(--wakno-logo-height)!important;min-height:var(--wakno-logo-height)!important;max-height:none!important;margin:0!important;padding:0!important;line-height:0!important;
+  overflow:hidden!important;transform:none!important;
+}
+body>header.wakno-header .wakno-logo>img{
+  display:block!important;width:100%!important;min-width:0!important;height:100%!important;
+  max-width:none!important;max-height:none!important;object-fit:contain!important;
+  object-position:left center!important;transform:none!important;margin:0!important;padding:0!important;
+}
+body>header.wakno-header .nav{box-sizing:border-box!important;align-items:center!important;margin:0!important;padding:0!important;transform:none!important}
+body>header.wakno-header .nav>a:not(.nav-cta){
+  box-sizing:border-box!important;font-family:Inter,Arial,sans-serif!important;font-size:11px!important;
+  font-weight:650!important;letter-spacing:.035em!important;line-height:1.2!important;
+  text-align:left!important;text-decoration:none!important;text-transform:uppercase!important;
+  color:#e6e8e8!important;white-space:nowrap!important;transform:none!important;
+}
+body>header.wakno-header .nav>a[aria-current="page"]:not(.nav-cta),
+body>header.wakno-header .nav>a:not(.nav-cta):hover{color:#83c5c7!important}
+body>header.wakno-header .nav-social{
+  display:flex!important;flex:0 0 auto!important;align-items:center!important;justify-content:center!important;
+  gap:12px!important;margin:0!important;padding:0!important;
+}
+body>header.wakno-header .nav-social>a{
+  box-sizing:border-box!important;display:grid!important;place-items:center!important;flex:0 0 23px!important;
+  width:23px!important;height:23px!important;margin:0!important;padding:0!important;
+  color:#e6e8e8!important;line-height:1!important;background:none!important;border:0!important;
+}
+body>header.wakno-header .nav-social>a:hover{color:#83c5c7!important}
+body>header.wakno-header .nav-social svg{
+  display:block!important;width:18px!important;height:18px!important;
+  fill:currentColor!important;stroke:none!important;overflow:visible!important;
+}
+/* Contur luminat pe o portiune, nu o banda multicolora pe toata marginea. */
+body>header.wakno-header a.nav-cta{
+  box-sizing:border-box!important;position:relative!important;isolation:isolate!important;overflow:hidden!important;
+  display:inline-flex!important;flex:0 0 auto!important;align-items:center!important;justify-content:center!important;
+  min-height:40px!important;width:auto!important;max-width:none!important;
+  margin:0!important;padding:0 18px!important;border:1px solid transparent!important;
+  border-radius:999px!important;background:#151c1e!important;color:#fff!important;
+  font:700 11px/1.2 Inter,Arial,sans-serif!important;letter-spacing:.025em!important;
+  text-transform:uppercase!important;text-align:center!important;text-decoration:none!important;white-space:nowrap!important;
+  box-shadow:0 0 15px rgba(70,129,132,.12)!important;transform:none!important;
+  transition:box-shadow .25s ease,filter .25s ease!important;
+}
+body>header.wakno-header a.nav-cta::before{
+  content:""!important;position:absolute!important;inset:-180%!important;z-index:-2!important;
+  background:conic-gradient(from 0deg,transparent 0deg,transparent 205deg,#31e9e4 250deg,#ffffff 270deg,#7282ff 295deg,#ed5bd6 320deg,transparent 350deg)!important;
+  animation:waknoHeaderCmyk 3.2s linear infinite!important;pointer-events:none!important;
+}
+body>header.wakno-header a.nav-cta::after{
+  content:""!important;position:absolute!important;inset:1.5px!important;z-index:-1!important;
+  border-radius:inherit!important;background:#151c1e!important;pointer-events:none!important;
+}
+body>header.wakno-header a.nav-cta:hover{box-shadow:0 0 18px rgba(57,231,227,.24)!important;filter:brightness(1.07)!important}
+body>header.wakno-header .menu-btn{
+  box-sizing:border-box!important;display:none!important;align-items:center!important;justify-content:center!important;
+  width:52px!important;height:52px!important;margin:0!important;padding:0!important;cursor:pointer!important;
+  background:#17191b!important;color:#fff!important;border:1px solid #ffffff55!important;border-radius:12px!important;
+}
+body>header.wakno-header .wakno-menu-icon{
+  display:block!important;position:relative!important;width:26px!important;height:26px!important;
+  background:linear-gradient(#fff,#fff) center 5px/26px 2.5px no-repeat,
+  linear-gradient(#fff,#fff) center 12px/26px 2.5px no-repeat,
+  linear-gradient(#fff,#fff) center 19px/26px 2.5px no-repeat!important;
+}
+body>header.wakno-header .menu-btn[aria-expanded="true"] .wakno-menu-icon{background:none!important}
+body>header.wakno-header .menu-btn[aria-expanded="true"] .wakno-menu-icon::before,
+body>header.wakno-header .menu-btn[aria-expanded="true"] .wakno-menu-icon::after{
+  content:""!important;position:absolute!important;top:12px!important;left:0!important;
+  width:26px!important;height:2.5px!important;background:#fff!important;transform:rotate(45deg)!important;
+}
+body>header.wakno-header .menu-btn[aria-expanded="true"] .wakno-menu-icon::after{transform:rotate(-45deg)!important}
+@keyframes waknoHeaderCmyk{to{transform:rotate(360deg)}}
+@media(min-width:1181px){
+  body>header.wakno-header .menu-btn{display:none!important}
+  body>header.wakno-header .nav{
+    box-sizing:border-box!important;position:static!important;display:flex!important;flex-direction:row!important;
+    flex:1 1 auto!important;min-width:0!important;width:auto!important;height:auto!important;
+    align-items:center!important;justify-content:flex-end!important;gap:clamp(11px,1.3vw,21px)!important;
+    border:0!important;background:none!important;overflow:visible!important;opacity:1!important;visibility:visible!important;
+  }
+  body>header.wakno-header .nav>a:not(.nav-cta){flex:0 0 auto!important;width:auto!important;margin:0!important;padding:0!important}
+}
+@media(max-width:1180px){
+  :root{--wakno-hdr-h:78px;--wakno-logo-width:150px;--wakno-logo-height:64px;--wakno-hdr-gutter:5vw}
+  body>header.wakno-header .menu-btn{display:flex!important;position:relative!important;z-index:504!important;flex:0 0 52px!important}
+  body>header.wakno-header .nav{
+    box-sizing:border-box!important;position:fixed!important;top:var(--wakno-hdr-h)!important;
+    left:0!important;right:0!important;bottom:0!important;z-index:503!important;
+    display:none!important;flex-direction:column!important;align-items:stretch!important;
+    justify-content:flex-start!important;gap:0!important;
+    width:100%!important;max-width:none!important;height:calc(100dvh - var(--wakno-hdr-h))!important;
+    max-height:none!important;margin:0!important;padding:18px 7vw 42px!important;
+    overflow-x:hidden!important;overflow-y:auto!important;overscroll-behavior:contain!important;
+    border:0!important;border-top:1px solid #ffffff20!important;
+    background:#090a0b!important;opacity:1!important;visibility:visible!important;
+    transform:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+  }
+  body>header.wakno-header .nav.open{display:flex!important}
+  body>header.wakno-header .nav>a:not(.nav-cta){
+    display:block!important;flex:0 0 auto!important;width:100%!important;margin:0!important;padding:12px 0!important;
+    font-size:clamp(20px,5.6vw,28px)!important;font-weight:700!important;letter-spacing:.025em!important;
+    line-height:1.25!important;white-space:normal!important;
+  }
+  body>header.wakno-header .nav-social{justify-content:flex-start!important;gap:18px!important;padding:12px 0!important}
+  body>header.wakno-header .nav-social>a{width:44px!important;height:44px!important;flex-basis:44px!important}
+  body>header.wakno-header .nav-social svg{width:22px!important;height:22px!important}
+  body>header.wakno-header a.nav-cta{
+    display:flex!important;align-self:stretch!important;flex:0 0 auto!important;
+    width:100%!important;min-height:52px!important;margin:14px 0 0!important;
+    font-size:14px!important;
+  }
+  body.wakno-menu-open{overflow:hidden!important}
+}
+@media(prefers-reduced-motion:reduce){body>header.wakno-header a.nav-cta::before{animation:none!important}}
 </style>
-<style id="wakno-dtf-social-svg-repair">
-.top .nav .nav-social a{display:inline-flex;align-items:center;justify-content:center;line-height:1;color:#f3f3f3}
-.top .nav .nav-social a svg{display:block;width:18px;height:18px;fill:currentColor;flex:none}
-</style>
-<style id="wakno-dtf-header-typography-match-home">
-/* Exclusiv tipografia linkurilor din header; SVG-urile si CTA raman intacte. */
-@media (min-width:761px){
- .top .nav>a:not(.nav-cta){font-family:Inter,Arial,sans-serif!important;font-size:12px!important;font-weight:600!important;letter-spacing:.08em!important;line-height:1.35!important;text-transform:uppercase!important;white-space:nowrap!important;}
-}
-@media (max-width:760px){
- .top .nav>a:not(.nav-cta){font-family:Inter,Arial,sans-serif!important;font-size:var(--wakno-menu-size-mobile,28px)!important;font-weight:750!important;letter-spacing:.025em!important;line-height:1.25!important;text-transform:uppercase!important;}
-}
-</style>
-<style id="wakno-header-layout-stable">
-/* WAKNO 2026-11: layout unic pentru header; nu afecteaza continutul paginii */
-@media(min-width:951px){
- .topbar,.top{width:100%!important;left:0!important;right:0!important}
- .topbar>.navrow,.topbar>.container.navrow,.top>.wrap{width:94%!important;max-width:1380px!important;margin-left:auto!important;margin-right:auto!important;min-height:84px!important;height:84px!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important}
- .topbar .logo,.top .wrap>a:has(>img.logo){display:flex!important;align-items:center!important;justify-content:flex-start!important;flex:0 0 170px!important;width:170px!important;min-width:170px!important;height:76px!important;overflow:hidden!important}
- .topbar .logo img,.top .logo{display:block!important;width:170px!important;max-width:170px!important;height:76px!important;max-height:76px!important;object-fit:contain!important;object-position:left center!important;transform:none!important;margin:0!important}
- .topbar .nav,.top .nav{display:flex!important;align-items:center!important;justify-content:flex-end!important;flex:1 1 auto!important;gap:clamp(10px,1.4vw,22px)!important;min-width:0!important;margin:0!important;padding:0!important;transform:none!important}
- .topbar .nav>a:not(.nav-cta),.top .nav>a:not(.nav-cta){font-family:Inter,Arial,sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.04em!important;line-height:1.2!important;text-transform:uppercase!important;white-space:nowrap!important;flex-shrink:0!important;padding:0!important;margin:0!important;transform:none!important}
- .topbar .nav-social,.top .nav-social{display:flex!important;align-items:center!important;justify-content:center!important;gap:16px!important;flex-shrink:0!important;margin:0!important}
- .topbar .nav-social a,.top .nav-social a{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:20px!important;height:22px!important;line-height:1!important}
- .topbar .nav-social svg,.top .nav-social svg{display:block!important;width:18px!important;height:18px!important;fill:currentColor!important}
- .topbar .nav-cta,.top .nav-cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-height:40px!important;white-space:nowrap!important;font-family:Inter,Arial,sans-serif!important;font-size:11px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:.025em!important;text-align:center!important;margin:0!important;transform:none!important}
-}
-@media(max-width:950px){
- .topbar>.navrow,.topbar>.container.navrow,.top>.wrap{width:94%!important;margin-inline:auto!important;min-height:78px!important;display:flex!important;align-items:center!important;justify-content:space-between!important}
- .topbar .logo,.top .wrap>a:has(>img.logo){display:flex!important;align-items:center!important;flex:0 0 160px!important;width:160px!important;min-width:160px!important;height:66px!important}
- .topbar .logo img,.top .logo{width:160px!important;height:66px!important;max-height:66px!important;object-fit:contain!important;object-position:left center!important;transform:none!important}
- .topbar .menu-btn,.top .menu-btn{display:grid!important;place-items:center!important;flex:0 0 50px!important;width:50px!important;height:50px!important}
- .topbar .nav,.top .nav{display:none!important}
- .topbar .nav.open,.top .nav.open{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}
- .topbar .nav.open>a:not(.nav-cta),.top .nav.open>a:not(.nav-cta){font-family:Inter,Arial,sans-serif!important;font-size:clamp(21px,5vw,28px)!important;font-weight:700!important;letter-spacing:.025em!important;line-height:1.25!important}
- .topbar .nav.open .nav-social,.top .nav.open .nav-social{display:flex!important;gap:20px!important;align-items:center!important}
- .topbar .nav.open .nav-social svg,.top .nav.open .nav-social svg{display:block!important;width:22px!important;height:22px!important;fill:currentColor!important}
-}
-@media(min-width:951px) and (max-width:1190px){
- .topbar .nav,.top .nav{gap:10px!important}
- .topbar .nav>a:not(.nav-cta),.top .nav>a:not(.nav-cta){font-size:10px!important;letter-spacing:0!important}
- .topbar .nav-social,.top .nav-social{gap:10px!important}
-}
-</style></head><body><div class="ambient" aria-hidden="true"><video autoplay muted loop playsinline preload="none"><source src="assets/ambient-loop.mp4" type="video/mp4"></video></div><header class="top"><div class="wrap"><a href="index.html" aria-label="WAKNO LABS Acasă"><img id="logo" class="logo" src="assets/wakno-logo.png" alt="WAKNO LABS" width="170" height="84"></a><button class="menu-btn" id="menuBtn" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav"><span class="wakno-menu-icon" aria-hidden="true"></span></button><nav class="nav" id="nav" aria-label="Navigare principală"><a href="index.html#acasa">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a href="print-dtf.html" aria-current="page">Print DTF</a><a href="index.html#despre">Despre noi</a><a href="index.html#cum-lucram">Cum lucrăm</a><a href="index.html#clienti">Clienți</a><span class="nav-social"><a aria-label="Instagram WAKNO LABS" href="https://www.instagram.com/wakno_lab/" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.7-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"></path></svg></a><a aria-label="TikTok WAKNO LABS" href="https://www.tiktok.com/@wakno.lab" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.6 2c.2 2.2 1.5 3.7 3.8 3.9v3.4a9.2 9.2 0 0 1-4.1-1.2v6.7a7 7 0 1 1-7-7c.5 0 1 .1 1.5.2v3.7a3.5 3.5 0 1 0 1.8 3.1V2h4z"></path></svg></a></span><a class="nav-cta" href="solicita-oferta.html">Solicită ofertă ↗</a></nav></div></header><main class="wrap"><section class="intro"><div class="eyebrow">WAKNO LABS / PERSONALIZARE TEXTILE</div><h1 id="dtfTitle">PRINT <span>DTF.</span></h1><p id="dtfSubtitle">Transferuri DTF pentru textile. Selectează lățimea și lungimea, apoi trimite solicitarea pe email.</p><div class="promo" id="promo" hidden></div><p class="availability" id="availability" hidden>Comenzile DTF sunt momentan indisponibile.</p></section><details class="glass about" id="ce-este-dtf"><summary><h2 class="sum-title">Ce este printul DTF?</h2><span class="sum-btn" aria-hidden="true"><span class="when-closed">Află mai multe</span><span class="when-open">Închide</span></span></summary>
+</head><body><div class="ambient" aria-hidden="true"><video autoplay muted loop playsinline preload="none"><source src="assets/ambient-loop.mp4" type="video/mp4"></video></div><header class="topbar top wakno-header"><div class="container navrow wakno-header-inner"><a aria-label="WAKNO LABS — Acasă" class="logo wakno-logo" href="index.html"><img id="logo" alt="WAKNO LABS" src="assets/uploads/1793482464622-f82f8905-685.png" width="170" height="72" decoding="async" fetchpriority="high"/></a><button aria-expanded="false" aria-label="Deschide meniul" class="menu-btn" id="menuBtn"><span class="wakno-menu-icon" aria-hidden="true"></span></button><nav aria-label="Navigare principală" class="nav" id="nav"><a href="index.html#acasa">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a aria-current="page" href="print-dtf.html">Print DTF</a><a href="index.html#despre">Despre noi</a><a href="index.html#cum-lucram">Cum lucrăm</a><a href="index.html#clienti">Clienți</a><span aria-label="Rețele sociale" class="nav-social"><a aria-label="Instagram WAKNO LABS" href="https://www.instagram.com/wakno_lab/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.7-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"></path></svg></a><a aria-label="TikTok WAKNO LABS" href="https://www.tiktok.com/@wakno.lab" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.6 2c.2 2.2 1.5 3.7 3.8 3.9v3.4a9.2 9.2 0 0 1-4.1-1.2v6.7a7 7 0 1 1-7-7c.5 0 1 .1 1.5.2v3.7a3.5 3.5 0 1 0 1.8 3.1V2h4z"></path></svg></a></span><a class="nav-cta" href="solicita-oferta.html">Solicită ofertă ↗</a></nav></div></header><main class="wrap"><section class="intro"><div class="eyebrow">WAKNO LABS / PERSONALIZARE TEXTILE</div><h1 id="dtfTitle">PRINT <span>DTF.</span></h1><p id="dtfSubtitle">Transferuri DTF pentru textile. Selectează lățimea și lungimea, apoi trimite solicitarea pe email.</p><div class="promo" id="promo" hidden></div><p class="availability" id="availability" hidden>Comenzile DTF sunt momentan indisponibile.</p></section><details class="glass about" id="ce-este-dtf"><summary><h2 class="sum-title">Ce este printul DTF?</h2><span class="sum-btn" aria-hidden="true"><span class="when-closed">Află mai multe</span><span class="when-open">Închide</span></span></summary>
 <div class="about-body">
 <p class="lead">Printul DTF (Direct-to-Film) este o tehnologie modernă de personalizare textilă care implică imprimarea digitală a designului pe o folie PET specială, urmată de aplicarea unei pudre adezive termice și transferul final pe material prin presă termică. Această metodă permite obținerea unor imprimeuri cu culori vibrante, detalii precise și alb opac, fiind compatibilă cu o gamă largă de materiale, inclusiv bumbac, poliester, amestecuri și piele ecologică, fără a necesita tratament prealabil al țesăturii.</p>
 <h3>Avantajele principale</h3>
@@ -548,7 +593,7 @@ $('copy').addEventListener('click',async e=>{if(!guard(e))return;const d=getData
 const oc=document.querySelector('.order-content');
 oc.addEventListener('input',e=>{if(e.target.name==='ctype'){const t=ctype();$('grp-fizica').hidden=t!=='fizica';$('grp-juridica').hidden=t!=='juridica';showErrs([])}else clearErr(e.target.id);updateLink()});
 oc.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'&&e.target.type!=='radio'){e.preventDefault();$('send').click()}});fetch('./content.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(!d)return;cfg={...cfg,...(d.dtf||{})};if(!Array.isArray(cfg.widths))cfg.widths=[];
-cfg.widths=cfg.widths.map(w=>({...w,printableCm:Number(w.widthCm)===90?87:Number(w.widthCm)===60?57:w.printableCm}));const title=cfg.title||'PRINT DTF';const h=$('dtfTitle');h.replaceChildren();if(/^PRINT\s+DTF\.?$/i.test(title.trim())){h.append(document.createTextNode('PRINT '));const s=document.createElement('span');s.textContent='DTF.';h.append(s)}else h.textContent=title;animateDtfTitle();$('dtfSubtitle').textContent=cfg.subtitle||'';$('promo').textContent=cfg.promotion||'';$('promo').hidden=!cfg.promotion;$('availability').hidden=cfg.available!==false;if(safeAsset(cfg.image))$('dtfImage').src=cfg.image;if(safeAsset(d.branding?.headerLogo))$('logo').src=d.branding.headerLogo;const accent=d.design?.accent;if(/^#[a-f0-9]{6}$/i.test(accent||''))document.documentElement.style.setProperty('--accent',accent);draw()}).catch(()=>draw());const ab=$('ce-este-dtf'),openAbout=()=>{if(ab&&location.hash==='#ce-este-dtf')ab.open=true};openAbout();addEventListener('hashchange',openAbout);draw()})();
+cfg.widths=cfg.widths.map(w=>({...w,printableCm:Number(w.widthCm)===90?87:Number(w.widthCm)===60?57:w.printableCm}));const title=cfg.title||'PRINT DTF';const h=$('dtfTitle');h.replaceChildren();if(/^PRINT\s+DTF\.?$/i.test(title.trim())){h.append(document.createTextNode('PRINT '));const s=document.createElement('span');s.textContent='DTF.';h.append(s)}else h.textContent=title;animateDtfTitle();$('dtfSubtitle').textContent=cfg.subtitle||'';$('promo').textContent=cfg.promotion||'';$('promo').hidden=!cfg.promotion;$('availability').hidden=cfg.available!==false;if(safeAsset(cfg.image))$('dtfImage').src=cfg.image;if(safeAsset(d.branding?.headerLogo)&&d.branding.headerLogo!=='assets/wakno-logo.png'){const n=d.branding.headerLogo,l=$('logo');if(l.getAttribute('src')!==n){const t=new Image();t.onload=()=>{l.src=n};t.src=n}}const accent=d.design?.accent;if(/^#[a-f0-9]{6}$/i.test(accent||''))document.documentElement.style.setProperty('--accent',accent);draw()}).catch(()=>draw());const ab=$('ce-este-dtf'),openAbout=()=>{if(ab&&location.hash==='#ce-este-dtf')ab.open=true};openAbout();addEventListener('hashchange',openAbout);draw()})();
 </script>
 <script>
 /* Același număr și aceeași stare ca pe homepage, din dashboard. */
@@ -606,4 +651,4 @@ fetch('./content.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(data
  },true);
 })();
 </script>
-</body></html>
+<script id="wakno-menu-resize-guard">(function(){var n=document.getElementById('nav'),b=document.getElementById('menuBtn');if(!n||!b||!window.matchMedia)return;var mq=matchMedia('(min-width:1181px)');function close(){n.classList.remove('open');document.body.classList.remove('wakno-menu-open');document.body.style.overflow='';b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','Deschide meniul');b.dataset.menuState='closed'}(mq.addEventListener?mq.addEventListener('change',function(e){if(e.matches)close()}):mq.addListener(function(e){if(e.matches)close()}))})();</script></body></html>
