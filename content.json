@@ -126,7 +126,7 @@
       "title": "Proiect nou",
       "description": "sdasdasa",
       "category": "Portofoliu",
-      "image": "assets/uploads/1793235045396-a370ba12-5cd.jpg"
+      "image": "assets/uploads/1793466820141-6da7c614-9a2.jpg"
     },
     {
       "title": "Proiect nou",
@@ -249,7 +249,7 @@
     "prompt": "Alege serviciile dorite și completează detaliile.",
     "submitLabel": "TRIMITE SOLICITAREA",
     "successTitle": "Solicitarea ta este pregătită!",
-    "successMessage": "Îți mulțumim că ai ales WAKNO LABS. Finalizează trimiterea din aplicația de email care se deschide. Solicitarea nu este transmisă până când apeși „Trimite” în aplicația de email.",
+    "successMessage": "Îți mulțumim că ai ales WAKNO LAB. Finalizează trimiterea din aplicația de email care se deschide. Solicitarea nu este transmisă până când apeși „Trimite” în aplicația de email.",
     "services": [
       {
         "id": "Stickere și autocolante",
