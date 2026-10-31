@@ -608,7 +608,41 @@ body section#contact .eyebrow {
 @keyframes waknoNoticeEnter{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
 @keyframes waknoCheckPop{from{opacity:0;transform:scale(.55)}to{opacity:1;transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){.wakno-submission-notice,.wakno-submission-check{animation:none}}
-</style></head><body><div aria-hidden="true" class="ambient-background"><video autoplay="" loop="" muted="" playsinline="" preload="metadata" src="assets/ambient-loop.mp4"></video></div>
+</style><style id="wakno-mobile-layout-fix-20261031">
+@media(max-width:760px){
+ html,body{max-width:100%;overflow-x:clip}
+ .topbar{z-index:500!important}
+ .navrow{min-height:72px!important}
+ .logo img{width:min(45vw,155px)!important;height:auto!important;max-height:60px!important;object-fit:contain}
+ .menu-btn{width:48px!important;height:48px!important;min-width:48px!important;font-size:25px!important}
+ .nav{top:72px!important;height:calc(100dvh - 72px)!important;max-height:calc(100dvh - 72px)!important;padding:14px 6% calc(24px + env(safe-area-inset-bottom))!important;gap:0!important;overflow-y:auto!important;overscroll-behavior:contain!important;align-items:stretch!important}
+ .nav>a:not(.nav-cta){font-size:clamp(17px,5vw,21px)!important;line-height:1.25!important;padding:11px 0!important;letter-spacing:.015em!important;overflow-wrap:anywhere}
+ .nav-social{margin-top:10px!important;padding:8px 0!important;gap:16px!important}
+ .nav-social a{width:40px!important;height:40px!important}
+ .nav-cta{margin:10px 0 16px!important;padding:14px 12px!important;min-height:52px!important;font-size:13px!important;flex-shrink:0!important}
+ .whatsapp-float{width:46px!important;height:46px!important;right:10px!important;bottom:calc(12px + env(safe-area-inset-bottom))!important;z-index:80!important}
+ .container{width:90%!important;max-width:100%!important}
+ .wakno-offer,.wakno-offer-grid,#waknoOfferForm{min-width:0;max-width:100%}
+ .wakno-offer label{font-size:14px;line-height:1.45;gap:7px;margin-bottom:13px}
+ .wakno-offer input:not([type=radio]):not([type=checkbox]),.wakno-offer select,.wakno-offer textarea{font-size:16px!important;max-width:100%;padding:12px!important;line-height:1.4!important}
+ .wakno-offer textarea{min-height:94px}
+ .wakno-offer .wakno-offer-hint,.wakno-offer .wakno-multi-request-note p{font-size:13px!important;line-height:1.5!important}
+ .wakno-offer-note{padding:13px!important;font-size:13px!important;line-height:1.55!important}
+ .wakno-offer-note p{font-size:13px!important;line-height:1.55!important}
+ .wakno-cube-options .wakno-cube-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+ .wakno-cube-options .wakno-cube-grid .wakno-cube-choice{min-width:0!important;min-height:130px!important;padding:10px 6px!important;gap:5px!important}
+ .wakno-cube-options .wakno-cube-icon,.wakno-cube-options .wakno-cube-svg{height:68px!important;max-width:100%!important}
+ .wakno-cube-options .wakno-cube-name{font-size:13px!important;line-height:1.3!important}
+ .wakno-cube-options .wakno-cube-grid label small{font-size:12px!important;line-height:1.35!important}
+ #waknoOfferForm fieldset{max-width:100%;min-width:0}
+ #waknoOfferForm .wakno-service-entry{max-width:100%;min-width:0}
+ #waknoOfferForm .wakno-offer-send{width:100%;min-height:56px!important;padding:15px 17px!important;font-size:15px!important}
+ #waknoOfferForm .wakno-service-summary{overflow-wrap:anywhere}
+ #contact{padding-bottom:85px!important}
+}
+@media(max-width:390px){.nav>a:not(.nav-cta){font-size:17px!important}.wakno-cube-options .wakno-cube-grid .wakno-cube-choice{min-height:122px!important}}
+</style>
+</head><body><div aria-hidden="true" class="ambient-background"><video autoplay="" loop="" muted="" playsinline="" preload="metadata" src="assets/ambient-loop.mp4"></video></div>
 <header class="topbar"><div class="container navrow"><a aria-label="WAKNO LABS — Acasă" class="logo" href="index.html"><img alt="WAKNO LABS" src="assets/wakno-logo.png"/></a><button aria-expanded="false" aria-label="Deschide meniul" class="menu-btn" id="menuBtn">☰</button><nav aria-label="Navigare principală" class="nav" id="nav"><a href="index.html#acasa">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a href="print-dtf.html">Print DTF</a><a href="index.html#despre">Despre noi</a><a href="index.html#cum-lucram">Cum lucrăm</a><a href="index.html#clienti">Clienți</a><span aria-label="Rețele sociale" class="nav-social"><a aria-label="Instagram WAKNO LABS" href="https://www.instagram.com/wakno_lab/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.7-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"></path></svg></a><a aria-label="TikTok WAKNO LABS" href="https://www.tiktok.com/@wakno.lab" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.6 2c.2 2.2 1.5 3.7 3.8 3.9v3.4a9.2 9.2 0 0 1-4.1-1.2v6.7a7 7 0 1 1-7-7c.5 0 1 .1 1.5.2v3.7a3.5 3.5 0 1 0 1.8 3.1V2h4z"></path></svg></a></span><a class="nav-cta" href="#contact">Solicită ofertă ↗</a></nav></div></header>
 <main>
 <section class="contact" id="contact"><div class="container">
@@ -1206,4 +1240,72 @@ document.getElementById('offerCopy').addEventListener('click',()=>{if(lastMessag
   #waknoOfferForm .wakno-service-entry.wakno-collapsed .wakno-summary-detail{font-size:15px}
 }
 </style>
-<style>.wakno-custom-heading{font-size:clamp(32px,5vw,70px);line-height:1.12;letter-spacing:-.03em}</style></body></html>
+<style>.wakno-custom-heading{font-size:clamp(32px,5vw,70px);line-height:1.12;letter-spacing:-.03em}</style><style id="wakno-banner-mobile-card-fix-20261031">
+/* Banner option cards: independent of the generic radio-option styles. */
+@media (max-width: 650px) {
+  #waknoOfferForm .wakno-banner-options .wakno-sticker-choices {
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:10px !important;
+    width:100% !important;
+    min-width:0 !important;
+  }
+  #waknoOfferForm .wakno-banner-options .wakno-sticker-choices > label {
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    align-items:center !important;
+    text-align:center !important;
+    position:relative !important;
+    min-width:0 !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:145px !important;
+    padding:16px 9px 13px !important;
+    gap:9px !important;
+    box-sizing:border-box !important;
+    white-space:normal !important;
+    overflow-wrap:normal !important;
+    word-break:normal !important;
+    writing-mode:horizontal-tb !important;
+  }
+  #waknoOfferForm .wakno-banner-options .wakno-sticker-choices > label > input[type="radio"] {
+    position:absolute !important;
+    top:10px !important;
+    left:10px !important;
+    width:17px !important;
+    height:17px !important;
+    margin:0 !important;
+    flex:none !important;
+  }
+  #waknoOfferForm .wakno-banner-options .wakno-sticker-choices > label > svg.wakno-banner-icon {
+    display:block !important;
+    position:static !important;
+    flex:none !important;
+    width:min(100%,100px) !important;
+    height:78px !important;
+    max-width:100% !important;
+    margin:0 auto !important;
+  }
+  #waknoOfferForm .wakno-banner-options .wakno-sticker-choices > label > .wakno-banner-option-name {
+    display:block !important;
+    position:static !important;
+    flex:none !important;
+    width:100% !important;
+    max-width:100% !important;
+    font-size:13px !important;
+    font-weight:650 !important;
+    line-height:1.35 !important;
+    text-align:center !important;
+    white-space:normal !important;
+    overflow-wrap:break-word !important;
+    word-break:normal !important;
+    writing-mode:horizontal-tb !important;
+  }
+}
+@media (max-width:350px) {
+  #waknoOfferForm .wakno-banner-options .wakno-sticker-choices {gap:7px !important;}
+  #waknoOfferForm .wakno-banner-options .wakno-sticker-choices > label {padding:13px 6px 10px !important;}
+  #waknoOfferForm .wakno-banner-options .wakno-sticker-choices > label > .wakno-banner-option-name {font-size:12px !important;}
+}
+</style></body></html>
