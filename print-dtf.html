@@ -333,6 +333,50 @@
 .wa-dtf[hidden]{display:none!important}
 .wa-dtf:focus-visible{outline:3px solid #b7e6e6;outline-offset:4px}
 @media(max-width:760px){.wa-dtf{right:14px;bottom:14px;width:52px;height:52px}.wa-dtf svg{width:29px;height:29px}}
+</style><style id="wakno-unified-success-style">
+#wakno-unified-success{position:fixed!important;inset:0!important;z-index:2147483647!important;display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box;min-height:100dvh;overflow-y:auto;padding:36px 18px;background:radial-gradient(ellipse at 43% 65%,rgba(98,21,41,.45),transparent 44%),radial-gradient(ellipse at 62% 12%,rgba(33,17,75,.38),transparent 45%),#050608;color:#fff;text-align:center;font-family:Inter,Arial,sans-serif}
+#wakno-unified-success .wakno-success-inner{width:min(700px,100%);margin:auto}
+#wakno-unified-success .wakno-success-check{font-size:64px;line-height:1;color:#86cdd1;font-weight:400;margin-bottom:37px}
+#wakno-unified-success h1{font:750 clamp(36px,6.8vw,58px)/1.12 Inter,Arial,sans-serif;letter-spacing:-.025em;margin:0 auto 36px;max-width:650px;color:#fff}
+#wakno-unified-success p{font-size:clamp(16px,2.5vw,19px);line-height:1.65;color:#d0d0d4;margin:0 auto 34px;max-width:680px}
+#wakno-unified-success .wakno-success-actions{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}
+#wakno-unified-success .wakno-success-action{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:15px 26px;border-radius:999px;border:1px solid #8cc9e3;background:#609fc5;color:#fff;text-decoration:none;font:800 15px/1.2 Inter,Arial,sans-serif;cursor:pointer;transition:background .2s,transform .2s}
+#wakno-unified-success .wakno-success-action:hover{background:#78b5d7;transform:translateY(-2px)}
+#wakno-unified-success .wakno-success-action.home{background:transparent;border-color:#78b5d7}
+#wakno-unified-success .wakno-success-action.home:hover{background:rgba(96,159,197,.17)}
+#wakno-unified-success .wakno-success-action:focus-visible{outline:3px solid #fff;outline-offset:4px}
+@media(max-width:460px){#wakno-unified-success .wakno-success-check{margin-bottom:27px}#wakno-unified-success h1{margin-bottom:26px}#wakno-unified-success .wakno-success-actions{flex-direction:column}#wakno-unified-success .wakno-success-action{width:min(310px,100%)}}
+@media(prefers-reduced-motion:reduce){#wakno-unified-success .wakno-success-action{transition:none}}
+</style><style id="wakno-matching-submit-buttons">
+/* Aceeasi identitate vizuala pentru trimitere, pe ambele formulare */
+.wakno-offer-send, .order #send.cta{
+  position:relative!important;isolation:isolate;overflow:hidden;
+  display:inline-flex!important;align-items:center;justify-content:center;
+  gap:15px!important;min-height:62px!important;padding:18px 29px!important;
+  border:1px solid transparent!important;border-radius:999px!important;
+  background:#050607!important;color:#fff!important;
+  font:800 15px/1.3 Inter,Arial,sans-serif!important;letter-spacing:.015em!important;
+  text-decoration:none!important;box-shadow:0 0 17px rgba(70,129,132,.18)!important;
+  transform:none;transition:box-shadow .2s ease,transform .2s ease!important;
+}
+.wakno-offer-send::before, .order #send.cta::before{
+  content:"";position:absolute;inset:-240%;z-index:-2;pointer-events:none;
+  background:conic-gradient(transparent 0deg,transparent 185deg,#26dbe8 225deg,#a25dff 265deg,#ee4cce 300deg,transparent 345deg);
+  animation:waknoMatchingBorder 3.3s linear infinite;
+}
+.wakno-offer-send::after, .order #send.cta::after{
+  content:"";position:absolute;inset:1.5px;z-index:-1;pointer-events:none;
+  border-radius:inherit;background:#050607;
+}
+.wakno-offer-send:hover, .order #send.cta:hover{box-shadow:0 0 22px rgba(129,96,213,.35)!important;transform:translateY(-2px)!important}
+.wakno-offer-send:focus-visible, .order #send.cta:focus-visible{outline:3px solid #a9dadd;outline-offset:4px}
+@keyframes waknoMatchingBorder{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.wakno-offer-send::before,.order #send.cta::before{animation:none}}
+@media(max-width:760px){.wakno-offer-send,.order #send.cta{min-height:60px!important;font-size:14px!important;padding:17px 22px!important}}
+
+/* WAKNO LABS: gri industrial, fara schimbarea animatiei CMYK */
+.order #send.cta::after,.price-card::after{background:#151c1e!important}
+.order #send.cta{background:#151c1e!important}
 </style></head><body><div class="ambient" aria-hidden="true"><video autoplay muted loop playsinline preload="none"><source src="assets/ambient-loop.mp4" type="video/mp4"></video></div><header class="top"><div class="wrap"><a href="index.html" aria-label="WAKNO LABS Acasă"><img id="logo" class="logo" src="assets/wakno-logo.png" alt="WAKNO LABS" width="170" height="84"></a><button class="menu-btn" id="menuBtn" aria-label="Deschide meniul" aria-expanded="false" aria-controls="nav">☰</button><nav class="nav" id="nav" aria-label="Navigare principală"><a href="index.html">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a href="print-dtf.html" aria-current="page">Print DTF</a><a href="index.html#contact">Contact</a></nav></div></header><main class="wrap"><section class="intro"><div class="eyebrow">WAKNO LABS / PERSONALIZARE TEXTILE</div><h1 id="dtfTitle">PRINT <span>DTF.</span></h1><p id="dtfSubtitle">Transferuri DTF pentru textile. Selectează lățimea și lungimea, apoi trimite solicitarea pe email.</p><div class="promo" id="promo" hidden></div><p class="availability" id="availability" hidden>Comenzile DTF sunt momentan indisponibile.</p></section><details class="glass about" id="ce-este-dtf"><summary><h2 class="sum-title">Ce este printul DTF?</h2><span class="sum-btn" aria-hidden="true"><span class="when-closed">Află mai multe</span><span class="when-open">Închide</span></span></summary>
 <div class="about-body">
 <p class="lead">Printul DTF (Direct-to-Film) este o tehnologie modernă de personalizare textilă care implică imprimarea digitală a designului pe o folie PET specială, urmată de aplicarea unei pudre adezive termice și transferul final pe material prin presă termică. Această metodă permite obținerea unor imprimeuri cu culori vibrante, detalii precise și alb opac, fiind compatibilă cu o gamă largă de materiale, inclusiv bumbac, poliester, amestecuri și piele ecologică, fără a necesita tratament prealabil al țesăturii.</p>
@@ -350,7 +394,7 @@
 <li><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 32c-3-3 3-6 0-9s3-6 0-9"/><path d="M24 32c-3-3 3-6 0-9s3-6 0-9"/><path d="M33 32c-3-3 3-6 0-9s3-6 0-9"/><path d="M8 40h32"/></svg><strong>Uscare</strong>Folia se usucă, iar pudra se fixează (curing).</li>
 <li><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17 8c1 3 4 5 7 5s6-2 7-5l11 6-4 8-5-2v22H15V20l-5 2-4-8z"/><rect x="19" y="22" width="10" height="9" rx="1.5"/></svg><strong>Transfer<br>pe textile</strong>Folia se aplică pe produsul final cu presa termică, la 160–170 °C, timp de 10–15 secunde.</li>
 </ol>
-</div></details><section class="glass price-panel" aria-label="Tarife Print DTF"><div class="price-head"><div><h2>Alege lățimea producției</h2><p id="printable">Selectează lățimea rolei</p></div><div class="tabs" id="widthTabs" role="tablist" aria-label="Lățime rolă"></div></div><div class="cards" id="tiers" role="tabpanel" aria-live="polite"></div><noscript><p class="note">Activează JavaScript pentru a vedea tarifele sau scrie-ne direct la waknolab@gmail.com.</p></noscript><p class="note">Tarife în lei / metru liniar. Pentru intervalele fără preț publicat, solicită o ofertă. Fișierele grafice se atașează manual în email.</p></section><section class="glass order" id="comanda"><img id="dtfImage" class="order-image" src="assets/textile.webp" alt="Exemplu de personalizare textilă Print DTF" width="800" height="500" loading="lazy"><div class="order-content"><div class="eyebrow">WAKNO LABS / COMENZI</div><h2>Solicită comanda</h2><p>Completează detaliile și trimite solicitarea direct de pe site. Vei primi automat o confirmare pe email.</p>
+</div></details><section class="glass price-panel" aria-label="Tarife Print DTF"><div class="price-head"><div><h2>Alege lățimea producției</h2><p id="printable">Selectează lățimea rolei</p></div><div class="tabs" id="widthTabs" role="tablist" aria-label="Lățime rolă"></div></div><div class="cards" id="tiers" role="tabpanel" aria-live="polite"></div><noscript><p class="note">Activează JavaScript pentru a vedea tarifele sau scrie-ne direct la waknolab@gmail.com.</p></noscript><p class="note">Tarife în lei / metru liniar. Pentru intervalele fără preț publicat, solicită o ofertă. Fișierele grafice se atașează manual în email.</p></section><section class="glass order" id="comanda"><img id="dtfImage" class="order-image" src="assets/textile.webp" alt="Exemplu de personalizare textilă Print DTF" width="800" height="500" loading="lazy"><div class="order-content"><div class="eyebrow">WAKNO LABS / COMENZI</div><h2>Plasează comanda</h2><p>Completează detaliile și trimite solicitarea direct de pe site. Vei primi automat o confirmare pe email.</p>
 <div class="field"><label for="dtfClientName">Nume și prenume *</label><input id="dtfClientName" type="text" maxlength="120" autocomplete="name" required></div><div class="field"><label for="dtfClientEmail">Email *</label><input id="dtfClientEmail" type="email" maxlength="254" autocomplete="email" required></div><div class="field"><label for="dtfClientPhone">Telefon *</label><input id="dtfClientPhone" type="tel" maxlength="40" autocomplete="tel" required></div><div class="field"><label for="length">Cantitate dorită (metri liniari)</label><input id="length" type="number" min="0.1" step="0.1" value="1" inputmode="decimal" autocomplete="off" aria-describedby="selection e-length"><small class="err" id="e-length" hidden></small><p id="selection" class="note" role="status" aria-live="polite"></p></div>
 <div class="field"><label for="files">Link către fișierul grafic <span class="opt">(opțional)</span></label><input id="files" type="url" inputmode="url" autocomplete="off" maxlength="300" placeholder="Lipește linkul fișierului (WeTransfer, Google Drive etc.)" aria-describedby="files-hint e-files"><small class="err" id="e-files" hidden></small><p class="hint" id="files-hint">Încarcă fișierul pe <a href="https://wetransfer.com" target="_blank" rel="noopener noreferrer">WeTransfer</a> sau <a href="https://www.swisstransfer.com" target="_blank" rel="noopener noreferrer">SwissTransfer</a>, Google Drive, Dropbox sau alt serviciu de transfer, apoi copiază linkul aici. Dacă nu ai un link, poți atașa fișierul direct în email.</p></div>
 <fieldset id="dtfBilling"><legend>Date de facturare (opțional)</legend><label style="display:flex;align-items:center;gap:10px;font-size:14px"><input id="dtfBillingToggle" type="checkbox" style="width:20px;height:20px;flex:none"> Doresc să completez acum datele de facturare</label><div id="dtfBillingFields" hidden>
@@ -368,7 +412,7 @@
 </div>
 </div></fieldset>
 <div class="field"><label for="notes">Observații <span class="opt">(opțional)</span></label><textarea id="notes" rows="3" maxlength="400" aria-describedby="e-notes"></textarea><small class="err" id="e-notes" hidden></small></div>
-<a id="send" class="cta" href="#comanda">TRIMITE SOLICITAREA <span aria-hidden="true">↗</span></a>
+<a id="send" class="cta" href="#comanda">TRIMITE COMANDA <span aria-hidden="true">↗</span></a>
 <aside class="order-confirmation" aria-label="Ce se întâmplă după trimiterea comenzii?">
   <div class="order-confirmation-title"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5h6M9 12l2 2 4-4"/></svg><strong>Ce se întâmplă după trimiterea comenzii?</strong></div>
   <p>După primirea solicitării, vom analiza detaliile comenzii și fișierele grafice transmise. Vei primi o confirmare din partea noastră, împreună cu informațiile privind prețul final și termenul estimat de execuție.</p>
@@ -428,11 +472,19 @@ fetch('./content.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(data
  const $=id=>document.getElementById(id);
  const billing=$('dtfBillingToggle'),fields=$('dtfBillingFields'),send=$('send');
  billing.addEventListener('change',()=>{fields.hidden=!billing.checked});
- const confirm=document.createElement('section');confirm.id='dtfSuccess';confirm.hidden=true;
- confirm.setAttribute('aria-live','polite');confirm.style.cssText='display:none;min-height:70vh;align-items:center;justify-content:center;text-align:center;padding:45px 20px';
- confirm.innerHTML='<div style="max-width:650px;margin:auto"><div style="font-size:60px;color:#8bc8ca">✓</div><h1 style="font:700 clamp(34px,6vw,55px)/1.15 Inter,sans-serif;color:#fff">Solicitarea a fost trimisă!</h1><p style="font-size:18px;line-height:1.7;color:#d0dada">Îți mulțumim! Am primit solicitarea pentru Print DTF. Vei primi și un email de confirmare.</p><button id="dtfNew" class="cta" type="button">SOLICITARE NOUĂ ↗</button></div>';
- document.querySelector('main.wrap').after(confirm);
- $('dtfNew').addEventListener('click',()=>location.reload());
+ function waknoShowUnifiedSuccess(isDtf){
+  const old=document.getElementById('wakno-unified-success');if(old)old.remove();
+  const screen=document.createElement('section');screen.id='wakno-unified-success';screen.setAttribute('role','status');screen.setAttribute('aria-live','polite');
+  const inner=document.createElement('div');inner.className='wakno-success-inner';
+  const check=document.createElement('div');check.className='wakno-success-check';check.setAttribute('aria-hidden','true');check.textContent='✓';
+  const title=document.createElement('h1');title.textContent=isDtf?'Comanda a fost trimisă!':'Solicitarea a fost trimisă!';
+  const desc=document.createElement('p');desc.textContent=isDtf?'Îți mulțumim! Am primit comanda ta Print DTF. Vei primi și un email de confirmare.':'Îți mulțumim! Am primit solicitarea ta de ofertă. Vei primi și un email de confirmare.';
+  const actions=document.createElement('div');actions.className='wakno-success-actions';
+  const again=document.createElement('button');again.type='button';again.className='wakno-success-action';again.textContent=isDtf?'COMANDĂ NOUĂ ↗':'SOLICITARE NOUĂ ↗';again.addEventListener('click',()=>window.location.reload());
+  const home=document.createElement('a');home.href='index.html';home.className='wakno-success-action home';home.textContent='⌂  HOME';
+  actions.append(again,home);inner.append(check,title,desc,actions);screen.append(inner);document.body.append(screen);
+  document.body.style.overflow='';window.scrollTo(0,0);
+}
  let sending=false,done=false;
  send.addEventListener('click',async e=>{
   e.preventDefault();e.stopImmediatePropagation();if(sending||done)return;
@@ -444,9 +496,15 @@ fetch('./content.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(data
   const tab=document.querySelector('#widthTabs [aria-selected="true"]');const width=tab?tab.textContent.trim():'Nespecificată';
   let billingText='Date de facturare: vor fi furnizate ulterior';
   if(billing.checked){const type=document.querySelector('input[name="ctype"]:checked')?.value||'fizica';const ids=type==='juridica'?[['jName','Denumire firmă'],['jCui','CUI/CIF'],['jContact','Persoană de contact'],['jPhone','Telefon facturare']]:[['fName','Nume facturare'],['fPhone','Telefon facturare'],['fAddr','Adresă']];billingText='Tip client: '+(type==='juridica'?'Persoană juridică':'Persoană fizică')+'\n'+ids.map(([id,label])=>label+': '+($(id).value.trim()||'—')).join('\n')}
+  // Prețul se citește din tariful publicat pentru intervalul ales; nu se inventează valori.
+  const cards=[...document.querySelectorAll('#tiers .price-card')];
+  const tier=cards.find(card=>{const range=card.querySelector('.range')?.textContent||'';const numbers=(range.match(/\d+(?:[.,]\d+)?/g)||[]).map(n=>Number(n.replace(',','.')));return range.startsWith('Peste')?length>numbers[0]:numbers.length===2&&length>=numbers[0]&&length<=numbers[1]});
+  const unitText=tier?.querySelector('strong')?.textContent?.trim()||'';
+  const unit=unitText&&unitText!=='La cerere'?Number(unitText.replace(/\s/g,'').replace(',','.')):NaN;
+  const priceInfo=Number.isFinite(unit)&&unit>0?['Preț unitar: '+unit.toLocaleString('ro-RO',{maximumFractionDigits:2})+' lei/ml','Total estimat: '+(Math.round(unit*length*100)/100).toLocaleString('ro-RO',{maximumFractionDigits:2})+' lei']:['Preț: La cerere – va fi confirmat înainte de procesare'];
   const msg=['SERVICIU PRINT DTF','', 'Lățime rolă: '+width,'Cantitate: '+length.toLocaleString('ro-RO')+' metri liniari','Link fișiere grafice: '+(link||'Nu a fost furnizat'),'Observații: '+($('notes').value.trim()||'Fără observații'),'','DATE DE FACTURARE',billingText].join('\n');
-  const old=send.innerHTML;sending=true;send.textContent='SE TRIMITE...';send.setAttribute('aria-disabled','true');$('sendMsg').textContent='Se trimite solicitarea. Te rugăm să aștepți...';
-  try{const response=await fetch('https://wakno-labs-auth.waknolab.workers.dev/api/offer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,phone,subject:'WAKNO LABS | SERVICIU PRINT DTF – '+name,message:msg,website:''})});const data=await response.json().catch(()=>({}));if(!response.ok)throw Error(data.error||'Solicitarea nu a putut fi trimisă.');done=true;document.querySelector('.top').hidden=true;document.querySelector('main.wrap').hidden=true;document.querySelector('.footer').hidden=true;const wa=$('waDtf');if(wa)wa.hidden=true;confirm.hidden=false;confirm.style.display='flex';window.scrollTo(0,0);document.body.style.overflow='';}
+  const old=send.innerHTML;sending=true;send.textContent='SE TRIMITE...';send.setAttribute('aria-disabled','true');$('sendMsg').textContent='Se trimite comanda. Te rugăm să aștepți...';
+  try{const response=await fetch('https://wakno-labs-auth.waknolab.workers.dev/api/offer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,phone,subject:'WAKNO LABS | SERVICIU PRINT DTF – '+name,message:msg,website:''})});const data=await response.json().catch(()=>({}));if(!response.ok)throw Error(data.error||'Solicitarea nu a putut fi trimisă.');done=true;waknoShowUnifiedSuccess(true);}
   catch(err){$('sendMsg').textContent='Eroare: '+err.message+' Datele au fost păstrate. Încearcă din nou.';}
   finally{sending=false;if(!done){send.innerHTML=old;send.setAttribute('aria-disabled','false')}}
  },true);
