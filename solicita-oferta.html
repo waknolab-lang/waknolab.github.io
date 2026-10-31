@@ -725,9 +725,9 @@ body section#contact .eyebrow {
 </section>
 <button class="wakno-offer-send" type="submit">TRIMITE SOLICITAREA <span aria-hidden="true" class="wakno-send-arrow">↗</span></button>
 <div class="wakno-offer-note"><strong>Ce se întâmplă după trimiterea solicitării?</strong><p>După primirea solicitării, vom analiza detaliile proiectului și fișierele transmise. Te vom contacta pentru confirmarea solicitării și stabilirea tuturor detaliilor, inclusiv prețul final și termenul estimat de execuție.</p><small>Producția începe doar după confirmarea comenzii și acceptarea tuturor detaliilor de către ambele părți.</small></div>
-<p class="wakno-offer-hint">Se deschide aplicația de email cu mesajul completat. Verifică-l și apasă „Trimite”. Datele nu sunt salvate pe site.</p>
+<p class="wakno-offer-hint">Solicitarea este transmisă direct din site. Vei vedea o confirmare după ce serviciul de email acceptă mesajul.</p>
 <div id="waknoSubmissionNotice" class="wakno-submission-notice" role="status" aria-live="polite" hidden></div>
-<p class="wakno-offer-fallback" hidden="" id="offerFallback">Nu s-a deschis aplicația de email? <a href="#" id="offerGmail" rel="noopener noreferrer" target="_blank">Deschide în Gmail</a> sau <button id="offerCopy" type="button">copiază mesajul</button>.</p>
+<p class="wakno-offer-fallback" hidden="" id="offerFallback"></p>
 </div></form></div></section><section aria-label="Program și informații" class="wakno-info container"><div class="wakno-date" id="waknoDate"><span id="waknoWeekday"></span><strong id="waknoDay"></strong><span id="waknoMonthYear"></span></div><div class="wakno-hours"><span class="eyebrow">Program de lucru</span><strong id="waknoWeekHours">Luni–Vineri · 09:00–16:00</strong><span id="waknoWeekend">Sâmbătă–Duminică: închis</span></div></section><div class="wakno-announcement container" hidden="" id="waknoAnnouncement" role="status"></div></main><a aria-label="Contactează WAKNO LABS pe WhatsApp" class="whatsapp-float" hidden="" href="#contact" id="whatsappFloat"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.074-.297-.148-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.496.099-.198.05-.372-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.693.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.005-1.413.248-.694.248-1.289.174-1.413-.074-.124-.272-.198-.57-.347M12.004 21.5h-.003a9.5 9.5 0 0 1-4.843-1.327l-.347-.206-3.601.944.961-3.51-.226-.36A9.49 9.49 0 0 1 2.5 12.004 9.5 9.5 0 1 1 12.004 21.5M12.004 0A12 12 0 0 0 1.68 18.126L0 24l6.02-1.578A12 12 0 1 0 12.004 0"></path></svg></a><footer class="footer"><div class="container footer-row"><span>© 2026 WAKNO LABS. Toate drepturile rezervate.</span><span>CONCEPT TO CRAFT. · <a href="portofoliu.html">Portofoliu</a> · <a href="print-dtf.html">Print DTF</a> · <a href="#contact">Contact</a></span></div><div aria-label="Informații ANPC – previzualizare vizuală" class="container anpc-footer"><div aria-label="ANPC – Soluționarea Alternativă a Litigiilor" class="anpc-footer-link" role="img"><span class="anpc-footer-kicker">ANPC · SAL</span><span>Soluționarea alternativă a litigiilor</span></div><div aria-label="ANPC România" class="anpc-footer-link" role="img"><span class="anpc-footer-kicker">PROTECȚIA CONSUMATORILOR</span><span>ANPC România</span></div></div></footer><script>const yearNode=document.getElementById('year');if(yearNode)yearNode.textContent=new Date().getFullYear();const b=document.getElementById('menuBtn'),n=document.getElementById('nav');b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'✕':'☰'});n.querySelectorAll('a').forEach(x=>x.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.textContent='☰'}));const obs='IntersectionObserver'in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.08}):null;document.querySelectorAll('.reveal').forEach(e=>obs?obs.observe(e):e.classList.add('visible'));const v=document.querySelector('.hero video');if(v){v.muted=true;const playback=v.play();if(playback&&playback.catch)playback.catch(()=>{});}</script><script>
 /* WAKNO LABS — conector pentru dashboard/content.json */
 (async function syncContent(){
@@ -1053,7 +1053,7 @@ function syncArtwork(){
 form.querySelectorAll('input[name="artworkStatus"],input[name="designAssets"]').forEach(input=>input.addEventListener('change',syncArtwork));
 syncArtwork();
 let lastMessage='';
-form.addEventListener('submit',e=>{e.preventDefault();
+form.addEventListener('submit',async e=>{e.preventDefault();
  const entries=[...list.querySelectorAll('.wakno-service-entry')];
  for(const entry of entries){const select=entry.querySelector('select');if(!select.value){select.setCustomValidity('Selectează un serviciu sau elimină această secțiune.');select.reportValidity();select.setCustomValidity('');return;}}
  // Each service must be explicitly confirmed before preparing the email.
@@ -1072,20 +1072,32 @@ form.addEventListener('submit',e=>{e.preventDefault();
  document.getElementById('offerPhone').setCustomValidity('');
  const subject='Cerere ofertă WAKNO LABS – '+entries.length+' servici'+(entries.length===1?'u':'i');
  lastMessage=['Bună ziua,','','Doresc o ofertă pentru următoarele produse:','',...entries.flatMap((entry,i)=>['--- Serviciul '+String(i+1).padStart(2,'0')+' ---',describe(entry),'']),'Nume: '+val('offerName'),'Telefon: '+phone,'Email: '+val('offerEmail'),'','Detalii despre proiect:',val('offerDetails')||'Nu au fost adăugate detalii suplimentare.','','Situația graficii: '+({ready:'Toate fișierele sunt pregătite pentru print',design:'Solicit realizarea graficii',partial:'Am grafică doar pentru unele produse'}[artworkStatus()]||'Nespecificată'),'Link fișiere pentru print: '+(val('offerFiles')||'Nu se aplică'),'Confirmare fișiere: '+(document.getElementById('offerFilesConfirm').checked&& !document.getElementById('offerFilesConfirm').disabled?'Clientul confirmă includerea fișierelor disponibile și accesul la link':'Nu se aplică'),'Descriere grafică solicitată: '+(val('offerDesignBrief')||'Nu se aplică'),'Materiale existente: '+({yes:'Da, există logo / fotografii / texte',no:'Nu, este necesar ajutor și pentru materiale'}[designAssetsStatus()]||'Nu se aplică'),'Link materiale existente: '+(val('offerDesignAssets')||'Nu a fost furnizat'),'Preferințe design: '+(val('offerDesignPreferences')||'Nespecificate'),'','Vă rog să confirmați primirea solicitării.'].join('\n');
- const mailto='mailto:'+recipient+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lastMessage);
- document.getElementById('offerGmail').href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(recipient)+'&su='+encodeURIComponent(subject)+'&body='+encodeURIComponent(lastMessage);
- document.getElementById('offerFallback').hidden=false;
-   const notice=document.getElementById('waknoSubmissionNotice');
-   if(notice){
-    notice.hidden=false;
-    notice.className='wakno-submission-notice';
-    notice.replaceChildren();const check=document.createElement('span');check.className='wakno-submission-check';check.setAttribute('aria-hidden','true');check.textContent='✓';const title=document.createElement('strong');title.textContent=offerSettings.successTitle||'Solicitarea ta este pregătită!';const desc=document.createElement('span');desc.textContent=offerSettings.successMessage||'Finalizează trimiterea din aplicația de email. Solicitarea nu este transmisă până când apeși Trimite în aplicația de email.';notice.append(check,title,desc);
-    notice.scrollIntoView({behavior:'smooth',block:'center'});
-   }
-   window.location.href=mailto;
+ const notice=document.getElementById('waknoSubmissionNotice');
+ const sendButton=form.querySelector('.wakno-offer-send');
+ if(sendButton.disabled)return;
+ sendButton.disabled=true;
+ if(notice){notice.hidden=false;notice.className='wakno-submission-notice';notice.textContent='Se trimite solicitarea...';}
+ document.getElementById('offerFallback').hidden=true;
+ try{
+  const response=await fetch('https://wakno-labs-auth.waknolab.workers.dev/api/offer',{
+   method:'POST',headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({name:val('offerName'),email:val('offerEmail'),phone,subject,message:lastMessage})
+  });
+  let result={};try{result=await response.json()}catch{}
+  if(!response.ok||!result.ok)throw Error(result.error||'Trimiterea a eșuat. Încearcă din nou.');
+  if(notice){
+   notice.className='wakno-submission-notice';notice.replaceChildren();
+   const check=document.createElement('span');check.className='wakno-submission-check';check.setAttribute('aria-hidden','true');check.textContent='✓';
+   const title=document.createElement('strong');title.textContent='Solicitarea a fost trimisă!';
+   const desc=document.createElement('span');desc.textContent='Îți mulțumim că ai ales WAKNO LABS! Am primit solicitarea și vom reveni cu un răspuns în cel mai scurt timp.';
+   notice.append(check,title,desc);
+  }
+ }catch(err){
+  if(notice){notice.className='wakno-submission-notice wakno-submission-warning';notice.textContent='Solicitarea nu a fost trimisă. '+(err?.message||'Verifică conexiunea și încearcă din nou.');}
+ }finally{sendButton.disabled=false;if(notice)notice.scrollIntoView({behavior:'smooth',block:'center'});}
 });
 document.getElementById('offerPhone').addEventListener('input',e=>e.target.setCustomValidity(''));
-document.getElementById('offerCopy').addEventListener('click',()=>{if(lastMessage&&navigator.clipboard?.writeText)navigator.clipboard.writeText(lastMessage).then(()=>{document.getElementById('offerCopy').textContent='mesaj copiat ✓'}).catch(()=>{});});
+
 })();</script>
 <style>
 /* Formularul devine activ doar după alegerea serviciului. */
