@@ -242,5 +242,85 @@
   },
   "analytics": {
     "cloudflareToken": ""
+  },
+  "offerForm": {
+    "recipientEmail": "waknolab@gmail.com",
+    "heading": "CE PUTEM FACE PENTRU TINE?",
+    "prompt": "Alege serviciile dorite și completează detaliile.",
+    "submitLabel": "TRIMITE SOLICITAREA",
+    "successTitle": "Solicitarea ta este pregătită!",
+    "successMessage": "Îți mulțumim că ai ales WAKNO LABS. Finalizează trimiterea din aplicația de email care se deschide. Solicitarea nu este transmisă până când apeși „Trimite” în aplicația de email.",
+    "services": [
+      {
+        "id": "Stickere și autocolante",
+        "label": "Stickere și autocolante",
+        "enabled": true
+      },
+      {
+        "id": "Flyere",
+        "label": "Flyere",
+        "enabled": true
+      },
+      {
+        "id": "Afișe / postere",
+        "label": "Afișe / postere",
+        "enabled": true
+      },
+      {
+        "id": "Bannere",
+        "label": "Bannere",
+        "enabled": true
+      },
+      {
+        "id": "Roll-up-uri",
+        "label": "Roll-up-uri",
+        "enabled": true
+      },
+      {
+        "id": "Inscripționări vitrine și window graphics",
+        "label": "Inscripționări vitrine și window graphics",
+        "enabled": true
+      },
+      {
+        "id": "Colantări și inscripționări auto",
+        "label": "Colantări și inscripționări auto",
+        "enabled": true
+      },
+      {
+        "id": "Textile personalizate",
+        "label": "Textile personalizate",
+        "enabled": true
+      },
+      {
+        "id": "Tablouri canvas",
+        "label": "Tablouri canvas",
+        "enabled": true
+      },
+      {
+        "id": "Printare 3D",
+        "label": "Printare 3D",
+        "enabled": true
+      },
+      {
+        "id": "Litere volumetrice",
+        "label": "Litere volumetrice",
+        "enabled": true
+      },
+      {
+        "id": "Casete luminoase",
+        "label": "Casete luminoase",
+        "enabled": true
+      },
+      {
+        "id": "Cuburi promoționale personalizate",
+        "label": "Cuburi promoționale personalizate",
+        "enabled": true
+      },
+      {
+        "id": "Alt serviciu / proiect personalizat",
+        "label": "Alt serviciu / proiect personalizat",
+        "enabled": true
+      }
+    ]
   }
 }
