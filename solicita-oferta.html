@@ -749,30 +749,38 @@ body.wakno-offer-complete .wakno-new-request:focus-visible{outline:2px solid #b2
 @keyframes waknoCtaUnifiedSpin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.nav-cta::before,.top .nav-cta::before,.topbar .nav-cta::before{animation:none!important}}
 </style>
-<style id="wakno-logo-loading-fix">
-/* Prevent old logo flashing before content.json supplies the configured logo. */
-.wakno-brand-img[data-logo-ready="no"]{visibility:hidden!important}
-.wakno-brand-img[data-logo-ready="yes"]{visibility:visible!important}
-.wakno-brand-fallback{display:none;color:#f4f4f4;font-family:Inter,Arial,sans-serif;font-size:20px;font-weight:800;letter-spacing:.07em;white-space:nowrap}
-.wakno-brand-fallback.is-visible{display:inline-block}
+<style id="wakno-header-layout-stable">
+/* WAKNO 2026-11: layout unic pentru header; nu afecteaza continutul paginii */
+@media(min-width:951px){
+ .topbar,.top{width:100%!important;left:0!important;right:0!important}
+ .topbar>.navrow,.topbar>.container.navrow,.top>.wrap{width:94%!important;max-width:1380px!important;margin-left:auto!important;margin-right:auto!important;min-height:84px!important;height:84px!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important}
+ .topbar .logo,.top .wrap>a:has(>img.logo){display:flex!important;align-items:center!important;justify-content:flex-start!important;flex:0 0 170px!important;width:170px!important;min-width:170px!important;height:76px!important;overflow:hidden!important}
+ .topbar .logo img,.top .logo{display:block!important;width:170px!important;max-width:170px!important;height:76px!important;max-height:76px!important;object-fit:contain!important;object-position:left center!important;transform:none!important;margin:0!important}
+ .topbar .nav,.top .nav{display:flex!important;align-items:center!important;justify-content:flex-end!important;flex:1 1 auto!important;gap:clamp(10px,1.4vw,22px)!important;min-width:0!important;margin:0!important;padding:0!important;transform:none!important}
+ .topbar .nav>a:not(.nav-cta),.top .nav>a:not(.nav-cta){font-family:Inter,Arial,sans-serif!important;font-size:11px!important;font-weight:600!important;letter-spacing:.04em!important;line-height:1.2!important;text-transform:uppercase!important;white-space:nowrap!important;flex-shrink:0!important;padding:0!important;margin:0!important;transform:none!important}
+ .topbar .nav-social,.top .nav-social{display:flex!important;align-items:center!important;justify-content:center!important;gap:16px!important;flex-shrink:0!important;margin:0!important}
+ .topbar .nav-social a,.top .nav-social a{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:20px!important;height:22px!important;line-height:1!important}
+ .topbar .nav-social svg,.top .nav-social svg{display:block!important;width:18px!important;height:18px!important;fill:currentColor!important}
+ .topbar .nav-cta,.top .nav-cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-height:40px!important;white-space:nowrap!important;font-family:Inter,Arial,sans-serif!important;font-size:11px!important;font-weight:700!important;line-height:1.2!important;letter-spacing:.025em!important;text-align:center!important;margin:0!important;transform:none!important}
+}
+@media(max-width:950px){
+ .topbar>.navrow,.topbar>.container.navrow,.top>.wrap{width:94%!important;margin-inline:auto!important;min-height:78px!important;display:flex!important;align-items:center!important;justify-content:space-between!important}
+ .topbar .logo,.top .wrap>a:has(>img.logo){display:flex!important;align-items:center!important;flex:0 0 160px!important;width:160px!important;min-width:160px!important;height:66px!important}
+ .topbar .logo img,.top .logo{width:160px!important;height:66px!important;max-height:66px!important;object-fit:contain!important;object-position:left center!important;transform:none!important}
+ .topbar .menu-btn,.top .menu-btn{display:grid!important;place-items:center!important;flex:0 0 50px!important;width:50px!important;height:50px!important}
+ .topbar .nav,.top .nav{display:none!important}
+ .topbar .nav.open,.top .nav.open{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}
+ .topbar .nav.open>a:not(.nav-cta),.top .nav.open>a:not(.nav-cta){font-family:Inter,Arial,sans-serif!important;font-size:clamp(21px,5vw,28px)!important;font-weight:700!important;letter-spacing:.025em!important;line-height:1.25!important}
+ .topbar .nav.open .nav-social,.top .nav.open .nav-social{display:flex!important;gap:20px!important;align-items:center!important}
+ .topbar .nav.open .nav-social svg,.top .nav.open .nav-social svg{display:block!important;width:22px!important;height:22px!important;fill:currentColor!important}
+}
+@media(min-width:951px) and (max-width:1190px){
+ .topbar .nav,.top .nav{gap:10px!important}
+ .topbar .nav>a:not(.nav-cta),.top .nav>a:not(.nav-cta){font-size:10px!important;letter-spacing:0!important}
+ .topbar .nav-social,.top .nav-social{gap:10px!important}
+}
 </style></head><body><div aria-hidden="true" class="ambient-background"><video autoplay="" loop="" muted="" playsinline="" preload="metadata" src="assets/ambient-loop.mp4"></video></div>
-<header class="topbar"><div class="container navrow"><a aria-label="WAKNO LABS — Acasă" class="logo" href="index.html"><img class="wakno-brand-img" data-logo-ready="no" alt="WAKNO LABS" /><span class="wakno-brand-fallback" aria-label="WAKNO LABS">WAKNO LABS</span></a><button aria-expanded="false" aria-label="Deschide meniul" class="menu-btn" id="menuBtn"><span class="wakno-menu-icon" aria-hidden="true"></span></button><nav aria-label="Navigare principală" class="nav" id="nav"><a href="index.html#acasa">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a href="print-dtf.html">Print DTF</a><a href="index.html#despre">Despre noi</a><a href="index.html#cum-lucram">Cum lucrăm</a><a href="index.html#clienti">Clienți</a><span aria-label="Rețele sociale" class="nav-social"><a aria-label="Instagram WAKNO LABS" href="https://www.instagram.com/wakno_lab/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.7-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"></path></svg></a><a aria-label="TikTok WAKNO LABS" href="https://www.tiktok.com/@wakno.lab" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.6 2c.2 2.2 1.5 3.7 3.8 3.9v3.4a9.2 9.2 0 0 1-4.1-1.2v6.7a7 7 0 1 1-7-7c.5 0 1 .1 1.5.2v3.7a3.5 3.5 0 1 0 1.8 3.1V2h4z"></path></svg></a></span><a class="nav-cta" href="#contact">Solicită ofertă ↗</a></nav></div></header><script id="wakno-logo-loading-script">
-(function(){
- const img=document.querySelector('img.wakno-brand-img');
- if(!img)return;
- const fallback=img.nextElementSibling;
- const showFallback=()=>{img.dataset.logoReady='no';if(fallback&&fallback.classList.contains('wakno-brand-fallback'))fallback.classList.add('is-visible')};
- const showLogo=(src)=>{
-   if(!src||typeof src!=='string'||!/^assets\/[a-zA-Z0-9_./-]+$/.test(src)||src.includes('..')){showFallback();return}
-   const test=new Image();
-   test.onload=()=>{img.src=src;img.dataset.logoReady='yes';if(fallback)fallback.classList.remove('is-visible')};
-   test.onerror=showFallback;
-   test.src=src;
- };
- // The same published content.json that the dashboard edits. Never paint the old hardcoded logo first.
- fetch('./content.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('content.json');return r.json()}).then(d=>showLogo(d&&d.branding&&d.branding.headerLogo)).catch(showFallback);
-})();
-</script>
+<header class="topbar"><div class="container navrow"><a aria-label="WAKNO LABS — Acasă" class="logo" href="index.html"><img alt="WAKNO LABS" src="assets/wakno-logo.png"/></a><button aria-expanded="false" aria-label="Deschide meniul" class="menu-btn" id="menuBtn"><span class="wakno-menu-icon" aria-hidden="true"></span></button><nav aria-label="Navigare principală" class="nav" id="nav"><a href="index.html#acasa">Acasă</a><a href="index.html#servicii">Servicii</a><a href="portofoliu.html">Portofoliu</a><a href="print-dtf.html">Print DTF</a><a href="index.html#despre">Despre noi</a><a href="index.html#cum-lucram">Cum lucrăm</a><a href="index.html#clienti">Clienți</a><span aria-label="Rețele sociale" class="nav-social"><a aria-label="Instagram WAKNO LABS" href="https://www.instagram.com/wakno_lab/" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm5 2.3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2.2a3.3 3.3 0 1 0 0 6.6 3.3 3.3 0 0 0 0-6.6zm5.7-3.2a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"></path></svg></a><a aria-label="TikTok WAKNO LABS" href="https://www.tiktok.com/@wakno.lab" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M16.6 2c.2 2.2 1.5 3.7 3.8 3.9v3.4a9.2 9.2 0 0 1-4.1-1.2v6.7a7 7 0 1 1-7-7c.5 0 1 .1 1.5.2v3.7a3.5 3.5 0 1 0 1.8 3.1V2h4z"></path></svg></a></span><a class="nav-cta" href="#contact">Solicită ofertă ↗</a></nav></div></header>
 <main>
 <section class="contact" id="contact"><div class="container">
 <div class="wakno-quote-intro"><div class="eyebrow">SOLICITARE OFERTĂ / WAKNO LABS</div><h1 class="wakno-wave-title"><span class="wakno-wave-word" style="--wave-delay:0.00s">CE</span> <span class="wakno-wave-word" style="--wave-delay:0.13s">PUTEM</span> <span class="wakno-wave-word" style="--wave-delay:0.26s">FACE</span> <span class="wakno-wave-word" style="--wave-delay:0.39s">PENTRU</span> <span class="wakno-wave-word" style="--wave-delay:0.52s">TINE?</span></h1></div><form class="wakno-offer" id="waknoOfferForm" novalidate=""><h2 class="wakno-service-prompt">Alege serviciile dorite și completează detaliile.</h2>
