@@ -50,7 +50,7 @@
     {
       "title": "Tablouri canvas",
       "description": "Printuri decorative și tablouri personalizate.",
-      "image": "assets/canvas.webp",
+      "image": "assets/uploads/1793493304053-99efd1f3-0c5.png",
       "large": false
     },
     {
@@ -76,12 +76,6 @@
       "title": "Cuburi promoționale luminoase",
       "description": "Cuburi personalizate și elemente luminoase pentru promovare.",
       "image": "assets/service-3.webp",
-      "large": false
-    },
-    {
-      "title": "Print DTF",
-      "description": "Transferuri DTF pentru personalizare textile. Vezi formatele și cere o ofertă.",
-      "image": "assets/textile.webp",
       "large": false
     }
   ],
