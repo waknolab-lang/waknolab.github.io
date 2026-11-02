@@ -7,26 +7,26 @@
   "services": [
     {
       "title": "Colantări & inscripționări auto",
-      "description": "Autoturisme, autoutilitare și flote comerciale.",
-      "image": "assets/uploads/1793491141815-484b556f-83f.png",
-      "large": false
-    },
-    {
-      "title": "Vitrine & spații comerciale",
-      "description": "Autocolante pentru geamuri, vitrine și suprafețe.",
-      "image": "assets/vitrine.webp",
+      "description": "",
+      "image": "assets/uploads/1793647734713-6b015647-d82.webp",
       "large": false
     },
     {
       "title": "Stickere și autocolante ",
-      "description": "Print, decupare pe contur și etichete.",
-      "image": "assets/uploads/1793493754305-c51af698-e84.png",
+      "description": "",
+      "image": "assets/uploads/1793647782231-c930afa8-b76.webp",
+      "large": false
+    },
+    {
+      "title": "Vitrine & spații comerciale",
+      "description": "",
+      "image": "assets/uploads/1793647822051-c1613a3a-485.webp",
       "large": false
     },
     {
       "title": "Bannere",
       "description": "Print de mari dimensiuni și materiale promoționale.",
-      "image": "assets/uploads/1793491176621-1cd79c74-a85.png",
+      "image": "assets/uploads/1793647834942-186ef011-b25.webp",
       "large": false
     },
     {
