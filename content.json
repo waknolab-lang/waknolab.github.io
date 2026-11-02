@@ -6,21 +6,21 @@
   },
   "services": [
     {
-      "title": "Colantări & inscripționări auto",
-      "description": "",
-      "image": "assets/uploads/1793647734713-6b015647-d82.webp",
-      "large": false
-    },
-    {
       "title": "Stickere și autocolante ",
       "description": "",
       "image": "assets/uploads/1793647782231-c930afa8-b76.webp",
       "large": false
     },
     {
-      "title": "Vitrine & spații comerciale",
+      "title": "Textile personalizate",
       "description": "",
-      "image": "assets/uploads/1793647822051-c1613a3a-485.webp",
+      "image": "assets/uploads/1793648674579-2d9d59bc-62f.webp",
+      "large": false
+    },
+    {
+      "title": "Colantări & inscripționări auto",
+      "description": "",
+      "image": "assets/uploads/1793647734713-6b015647-d82.webp",
       "large": false
     },
     {
@@ -30,9 +30,9 @@
       "large": false
     },
     {
-      "title": "Textile personalizate",
-      "description": "Tricouri, hanorace, șepci și accesorii.",
-      "image": "assets/uploads/1793648674579-2d9d59bc-62f.webp",
+      "title": "Vitrine & spații comerciale",
+      "description": "",
+      "image": "assets/uploads/1793647822051-c1613a3a-485.webp",
       "large": false
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "title": "Printare 3D",
-      "description": "Obiecte, prototipuri și piese personalizate.",
+      "description": "",
       "image": "assets/print3d.webp",
       "large": false
     },
@@ -55,15 +55,15 @@
     },
     {
       "title": "Flyere ",
-      "description": "Design grafic, printare și finisare pentru afaceri, evenimente și campanii.",
+      "description": "",
       "image": "assets/uploads/1793648553261-d441e0d4-65b.webp",
       "large": false,
       "category": "Print publicitar"
     },
     {
       "title": "Casete luminoase",
-      "description": "Reclame luminoase pentru fațade, spații comerciale și recepții.",
-      "image": "assets/uploads/1793648527125-c1fe753e-03e.webp",
+      "description": "",
+      "image": "assets/uploads/1793649454237-3d1e4e88-76d.webp",
       "large": false
     },
     {
