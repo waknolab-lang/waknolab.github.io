@@ -25,20 +25,20 @@
     },
     {
       "title": "Bannere",
-      "description": "Print de mari dimensiuni și materiale promoționale.",
-      "image": "assets/uploads/1793647834942-186ef011-b25.webp",
+      "description": "",
+      "image": "assets/uploads/1793648688208-a8458ec5-e04.webp",
       "large": false
     },
     {
       "title": "Textile personalizate",
       "description": "Tricouri, hanorace, șepci și accesorii.",
-      "image": "assets/uploads/1793492628487-14d5e737-0df.png",
+      "image": "assets/uploads/1793648674579-2d9d59bc-62f.webp",
       "large": false
     },
     {
       "title": "Roll-up-uri",
-      "description": "Sisteme de expunere pentru evenimente.",
-      "image": "assets/uploads/1793492914451-340f3eb8-4cd.png",
+      "description": "",
+      "image": "assets/uploads/1793648598628-754583a3-f19.webp",
       "large": false
     },
     {
@@ -49,33 +49,33 @@
     },
     {
       "title": "Tablouri canvas",
-      "description": "Printuri decorative și tablouri personalizate.",
-      "image": "assets/uploads/1793493304053-99efd1f3-0c5.png",
+      "description": "",
+      "image": "assets/uploads/1793648581286-094a132f-b1f.webp",
       "large": false
     },
     {
-      "title": "Flyere & Postere",
+      "title": "Flyere ",
       "description": "Design grafic, printare și finisare pentru afaceri, evenimente și campanii.",
-      "image": "assets/bannere.webp",
+      "image": "assets/uploads/1793648553261-d441e0d4-65b.webp",
       "large": false,
       "category": "Print publicitar"
     },
     {
       "title": "Casete luminoase",
       "description": "Reclame luminoase pentru fațade, spații comerciale și recepții.",
-      "image": "assets/service-1.webp",
+      "image": "assets/uploads/1793648527125-c1fe753e-03e.webp",
       "large": false
     },
     {
       "title": "Litere volumetrice",
-      "description": "Litere 3D pentru identitate vizuală, cu sau fără iluminare.",
-      "image": "assets/service-2.webp",
+      "description": "",
+      "image": "assets/uploads/1793648512038-3eabaa2d-330.webp",
       "large": false
     },
     {
-      "title": "Cuburi promoționale luminoase",
-      "description": "Cuburi personalizate și elemente luminoase pentru promovare.",
-      "image": "assets/service-3.webp",
+      "title": "Cuburi promoționale",
+      "description": "",
+      "image": "assets/uploads/1793648497994-825dbda3-42b.webp",
       "large": false
     }
   ],
