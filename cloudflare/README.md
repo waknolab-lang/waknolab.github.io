@@ -1,6 +1,6 @@
 # WAKNO LABS Worker — Admin 2.0 draft
 
-This directory contains a branch-only Worker implementation based on the Worker source supplied for review. It is not deployed. The existing public page layout, approved headers, and DTF price calculations are left untouched; the two public forms only add structured order data and a browser-held idempotency ID to their existing POST.
+This directory contains the branch-only Worker implementation based on the Worker source supplied for review. It is not deployed. The single-file upload artifact is `WAKNO-LABS-Worker-Admin2.js`; the source remains split between `worker.js` and `admin2.js` for maintenance. The existing public page layout, approved headers, and DTF price calculations are left untouched; the two public forms only add structured order data and a browser-held idempotency ID to their existing POST.
 
 ## Bindings and secrets
 
@@ -21,7 +21,7 @@ Use the existing Cloudflare project configuration and database name/ID. Apply th
 
 `/api/offer` validates the current form payload, persists the order and both notification jobs to D1 in one D1 batch, and only then returns success. Resend sends asynchronously from the durable outbox. The scheduled Worker retries failed notifications with stable Resend idempotency keys; the admin order record remains available if an email attempt fails. If D1 is unavailable, the form gets an error and the Worker does not claim that the order was saved.
 
-The authenticated editor is available from the Site tab and retains the existing sections (Branding, Prima pagină, Servicii, Clienți, Portofoliu, Despre noi, Contact & social, Design, Tipografie, Statistici, Program, Anunțuri, Print DTF, Formular ofertă). The main dashboard has four direct tabs: Site, Comenzi servicii, Print DTF, and CRM. Portfolio accepts batches of up to 30 images per upload; each file is limited to 20 MB. A local content preview is available before publishing. GitHub history for `content.json` can be used to restore an earlier version, which creates a new GitHub commit. The preview is a simplified rendering of the edited text and imagery, not a pixel-perfect copy of each production page.
+The authenticated editor is available from the Site tab and contains Logo & Branding, Prima pagină, Servicii, Clienți, Portofoliu, Despre noi, Contact & social, Design & culori, Design · Tipografie, Statistici, Program de lucru, Anunțuri, Print DTF, Formular ofertă, and SEO pagini. The main dashboard has four direct tabs: Site, Comenzi servicii, Print DTF, and CRM. Portfolio accepts batches of up to 30 images per upload; each file is limited to 20 MB. A local content preview is available before publishing. GitHub history for `content.json` can be used to restore an earlier version, which creates a new GitHub commit. The preview is a simplified rendering of the edited text and imagery, not a pixel-perfect copy of each production page.
 
 ## Analytics
 
@@ -29,7 +29,7 @@ The dashboard queries Cloudflare's RUM pageload dataset through the GraphQL Anal
 
 ## Remaining content-editor scope
 
-Page-specific SEO fields are not yet wired to the static page metadata. The backup/restore flow covers `content.json` versions in GitHub history; it does not back up customer/order data from D1.
+Page-specific SEO controls are connected to the existing static pages through their shared `content.json` fetch, and hidden flags are respected by the public service, client, and portfolio renderers. The backup/restore flow covers `content.json` versions in GitHub history; it does not back up customer/order data from D1.
 
 ## Deployment gate
 
