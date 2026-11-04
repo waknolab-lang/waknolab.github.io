@@ -1312,13 +1312,15 @@ form.addEventListener('submit',async e=>{e.preventDefault();
  sendButton.disabled=true;
  if(notice){notice.hidden=false;notice.className='wakno-submission-notice';notice.textContent='Se trimite solicitarea...';}
  document.getElementById('offerFallback').hidden=true;
+ const submissionKey='wakno-quote-submission-id';let submissionId=sessionStorage.getItem(submissionKey);if(!submissionId){submissionId=crypto.randomUUID();sessionStorage.setItem(submissionKey,submissionId)}
  try{
   const response=await fetch('https://wakno-labs-auth.waknolab.workers.dev/api/offer',{
    method:'POST',headers:{'Content-Type':'application/json'},
-   body:JSON.stringify({name:val('offerName'),email:val('offerEmail'),phone,subject,message:lastMessage})
+   body:JSON.stringify({name:val('offerName'),email:val('offerEmail'),phone,subject,message:lastMessage,submissionId,details:{services:entries.map(entry=>({summary:describe(entry)})),additionalDetails:val('offerDetails'),artworkStatus:artworkStatus(),artworkLink:val('offerFiles'),designBrief:val('offerDesignBrief'),existingMaterials:designAssetsStatus()}})
   });
   let result={};try{result=await response.json()}catch{}
   if(!response.ok||!result.ok)throw Error(result.error||'Trimiterea a eșuat. Încearcă din nou.');
+  sessionStorage.removeItem(submissionKey);
   if(notice)notice.hidden=false;
   document.body.classList.add('wakno-offer-complete');
   window.scrollTo({top:0,behavior:'instant'});
