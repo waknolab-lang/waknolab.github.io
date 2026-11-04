@@ -15,21 +15,21 @@ Do not commit any secret values. The site beacon token remains public site confi
 
 ## D1 migration
 
-Use the existing Cloudflare project configuration and database name/ID. Apply the SQL migrations in `migrations/` before enabling the new form endpoint. The migration creates customers, identity keys, service and DTF order details, status history, internal notes, email outbox, and short-lived hashed-IP rate-limit buckets.
+Use the existing Cloudflare project configuration and database name/ID. Apply the SQL migrations in `migrations/` before enabling the new form endpoint. The migration creates customers, identity keys, service and DTF order details, status history, internal notes, email outbox, and short-lived hashed-IP rate-limit buckets. Migration 0003 adds a claim timestamp for safe outbox recovery.
 
 ## Order and email flow
 
 `/api/offer` validates the current form payload, persists the order and both notification jobs to D1 in one D1 batch, and only then returns success. Resend sends asynchronously from the durable outbox. The scheduled Worker retries failed notifications with stable Resend idempotency keys; the admin order record remains available if an email attempt fails. If D1 is unavailable, the form gets an error and the Worker does not claim that the order was saved.
 
-The existing authenticated content editor remains available at `/admin/content`. `/admin` is the new orders and CRM dashboard. GitHub content editing still follows the existing mechanism and is not changed by this draft.
+The authenticated editor is available from the Site tab and retains the existing sections (Branding, Prima pagină, Servicii, Clienți, Portofoliu, Despre noi, Contact & social, Design, Tipografie, Statistici, Program, Anunțuri, Print DTF, Formular ofertă). The main dashboard has four direct tabs: Site, Comenzi servicii, Print DTF, and CRM. Portfolio accepts batches of up to 30 images per upload; each file is limited to 20 MB. A local content preview is available before publishing. GitHub history for `content.json` can be used to restore an earlier version, which creates a new GitHub commit. The preview is a simplified rendering of the edited text and imagery, not a pixel-perfect copy of each production page.
 
 ## Analytics
 
 The dashboard queries Cloudflare's RUM pageload dataset through the GraphQL Analytics API. It shows visits and page views, marks sampling, and leaves values blank when configuration or data is unavailable. Cloudflare defines a visit as a page view from another site or a direct link; it is not a count of individually identified people. The RUM API query still needs to be verified against the WAKNO Cloudflare account before deployment.
 
-## Features still requiring the existing production setup
+## Remaining content-editor scope
 
-This is a review draft, not a complete replacement of the current content editor. Bulk portfolio uploads with preview/reorder/hide/delete, website content draft preview and restore UI, full SEO/color controls, and a dashboard-driven backup/restore workflow are not implemented here. The current /admin/content editor remains available and continues its existing GitHub publishing flow. These areas need to be designed against the actual Worker configuration and current content.json contract before changing publishing behavior.
+Page-specific SEO fields are not yet wired to the static page metadata. The backup/restore flow covers `content.json` versions in GitHub history; it does not back up customer/order data from D1.
 
 ## Deployment gate
 
