@@ -9,12 +9,18 @@ const bodyLimit=async(req,max=30000)=>{const n=Number(req.headers.get('content-l
 const validStatus=new Set(['new','reviewing','quote_sent','confirmed','in_production','completed','cancelled']);
 const toCents=v=>v===null||v===''||v===undefined?null:(Number.isFinite(Number(v))&&Number(v)>=0?Math.round(Number(v)*100):NaN);
 
+async function mergeCustomerSubmission(db,id,{phone,billing}){
+ const old=await db.prepare('SELECT billing_json FROM customers WHERE id=?').bind(id).first();let current={};try{current=JSON.parse(old?.billing_json||'{}')}catch{}
+ const incoming=billing&&typeof billing==='object'&&!Array.isArray(billing)?billing:{};
+ const merged={...current,...Object.fromEntries(Object.entries(incoming).filter(([,v])=>v!==''&&v!==null&&v!==undefined))};
+ await db.prepare("UPDATE customers SET phone=CASE WHEN phone IS NULL OR phone='' THEN ? ELSE phone END,billing_json=?,updated_at=? WHERE id=?").bind(phone||null,JSON.stringify(merged),iso(),id).run();
+}
 async function matchOrCreateCustomer(db,{name,email,phone,billing}){
  const e=emailKey(email),p=phoneKey(phone),now=iso();
- if(e){const found=await db.prepare("SELECT customer_id FROM customer_identifiers WHERE kind='email' AND normalized_value=?").bind(e).first();if(found){await db.prepare("UPDATE customers SET phone=CASE WHEN phone IS NULL OR phone='' THEN ? ELSE phone END,updated_at=? WHERE id=?").bind(phone||null,now,found.customer_id).run();return found.customer_id}}
+ if(e){const found=await db.prepare("SELECT customer_id FROM customer_identifiers WHERE kind='email' AND normalized_value=?").bind(e).first();if(found){await mergeCustomerSubmission(db,found.customer_id,{phone,billing});return found.customer_id}}
  // A phone match is automatic only when no email was supplied and the number
  // resolves to one customer. Shared numbers and changed emails are not merged.
- if(!e&&p){const found=await db.prepare("SELECT customer_id FROM customer_identifiers WHERE kind='phone' AND normalized_value=? LIMIT 2").bind(p).all();if(found.results?.length===1)return found.results[0].customer_id;}
+ if(!e&&p){const found=await db.prepare("SELECT customer_id FROM customer_identifiers WHERE kind='phone' AND normalized_value=? LIMIT 2").bind(p).all();if(found.results?.length===1){await mergeCustomerSubmission(db,found.results[0].customer_id,{phone,billing});return found.results[0].customer_id}}
  const id=uuid();
  const statements=[db.prepare('INSERT INTO customers(id,display_name,email,phone,billing_json,created_at,updated_at) VALUES(?,?,?,?,?,?,?)').bind(id,name,email||null,phone||null,JSON.stringify(billing||{}),now,now)];
  if(e)statements.push(db.prepare("INSERT INTO customer_identifiers(customer_id,kind,normalized_value,created_at) VALUES(?,'email',?,?)").bind(id,e,now));
@@ -72,9 +78,9 @@ export async function scheduledMaintenance(env){await dispatchOutbox(env);if(env
 
 export async function dispatchOutbox(env){
  if(!env.DB||!env.RESEND_API_KEY)return;
- const now=iso(),stale=new Date(Date.now()-5*60*1000).toISOString();await env.DB.prepare("UPDATE email_outbox SET status='failed',last_error='Previous attempt interrupted.',next_attempt_at=? WHERE status='sending' AND created_at<?").bind(now,stale).run();
+ const now=iso(),stale=new Date(Date.now()-5*60*1000).toISOString();await env.DB.prepare("UPDATE email_outbox SET status='failed',last_error='Previous attempt interrupted.',next_attempt_at=? WHERE status='sending' AND (last_attempt_at IS NULL OR last_attempt_at<?)").bind(now,stale).run();
  const due=await env.DB.prepare("SELECT e.*,o.order_number,o.order_type,o.customer_id,c.display_name,c.email,c.phone,sd.services_json,sd.additional_details,sd.source_message AS service_message,dd.source_message AS dtf_message,dd.roll_width_cm,dd.ordered_length_m FROM email_outbox e JOIN orders o ON o.id=e.order_id JOIN customers c ON c.id=o.customer_id LEFT JOIN service_order_details sd ON sd.order_id=o.id LEFT JOIN dtf_order_details dd ON dd.order_id=o.id WHERE e.status IN ('pending','failed') AND e.attempts<15 AND e.next_attempt_at<=? ORDER BY e.created_at LIMIT 20").bind(iso()).all();
- for(const item of due.results||[]){const claim=await env.DB.prepare("UPDATE email_outbox SET status='sending',attempts=attempts+1 WHERE id=? AND status IN ('pending','failed')").bind(item.id).run();if(!claim.meta?.changes)continue;
+ for(const item of due.results||[]){const claim=await env.DB.prepare("UPDATE email_outbox SET status='sending',attempts=attempts+1,last_attempt_at=? WHERE id=? AND status IN ('pending','failed')").bind(iso(),item.id).run();if(!claim.meta?.changes)continue;
   const isAdmin=item.email_kind==='admin_notification',isDtf=item.order_type==='dtf',message=item.dtf_message||item.service_message||'';
   const title=isAdmin?(isDtf?'COMANDĂ NOUĂ PRINT DTF':'SOLICITARE NOUĂ DE OFERTĂ'):(isDtf?'Am primit comanda ta Print DTF!':'Am primit solicitarea ta!');
   const dtfSummary=isDtf?`\n\nRezumatul comenzii\nLățime rolă: ${item.roll_width_cm||'—'} cm\nCantitate: ${item.ordered_length_m||'—'} metri liniari`:'';const text=isAdmin?`Număr: ${item.order_number}\nClient: ${item.display_name}\nTelefon: ${item.phone||''}\nEmail: ${item.email}\n\n${message}`:`Bună, ${item.display_name}!\n\n${isDtf?'Îți mulțumim pentru comanda plasată la WAKNO LABS. Comanda ta Print DTF a fost înregistrată.':'Îți mulțumim pentru interesul acordat serviciilor WAKNO LABS. Solicitarea ta a fost înregistrată și te vom contacta în cel mai scurt timp.'}${dtfSummary}\n\nNumăr solicitare: ${item.order_number}`;
@@ -107,12 +113,12 @@ export async function handleAdminApi(request,env,session){
  const orderMatch=p.match(/^\/api\/admin\/orders\/([^/]+)(?:\/(notes|history))?$/);
  try{
   if(p==='/api/admin/overview'&&method==='GET'){
-   const [counts,recent,customers]=await Promise.all([
+   const [counts,recent,customers,analytics]=await Promise.all([
     env.DB.prepare("SELECT COUNT(*) AS total, SUM(CASE WHEN status='new' THEN 1 ELSE 0 END) AS new_count,SUM(CASE WHEN status='in_production' THEN 1 ELSE 0 END) AS production_count,SUM(CASE WHEN status='completed' THEN 1 ELSE 0 END) AS completed_count,SUM(CASE WHEN order_type='dtf' AND status='new' THEN 1 ELSE 0 END) AS dtf_new,SUM(CASE WHEN order_type='service_quote' AND status='new' THEN 1 ELSE 0 END) AS service_new FROM orders WHERE deleted_at IS NULL").first(),
     env.DB.prepare('SELECT o.order_number,o.order_type,o.status,o.submitted_at,c.display_name FROM orders o JOIN customers c ON c.id=o.customer_id WHERE o.deleted_at IS NULL ORDER BY o.submitted_at DESC LIMIT 8').all(),
-    env.DB.prepare('SELECT COUNT(*) AS total FROM customers WHERE deleted_at IS NULL').first()
+    env.DB.prepare('SELECT COUNT(*) AS total FROM customers WHERE deleted_at IS NULL').first(),
+    rumAnalytics(env)
    ]);
-   const analytics={available:false,reason:env.CF_ANALYTICS_API_TOKEN&&env.CF_ZONE_ID?'Interogarea Web Analytics nu este încă activată.':'Cloudflare API nu este configurat.'};
    return json({counts,customerCount:customers?.total||0,recent:recent.results||[],analytics});
   }
   if(p==='/api/admin/analytics'&&method==='GET')return json(await rumAnalytics(env));
