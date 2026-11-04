@@ -27,6 +27,10 @@ The existing authenticated content editor remains available at `/admin/content`.
 
 The dashboard queries Cloudflare's RUM pageload dataset through the GraphQL Analytics API. It shows visits and page views, marks sampling, and leaves values blank when configuration or data is unavailable. Cloudflare defines a visit as a page view from another site or a direct link; it is not a count of individually identified people. The RUM API query still needs to be verified against the WAKNO Cloudflare account before deployment.
 
+## Features still requiring the existing production setup
+
+This is a review draft, not a complete replacement of the current content editor. Bulk portfolio uploads with preview/reorder/hide/delete, website content draft preview and restore UI, full SEO/color controls, and a dashboard-driven backup/restore workflow are not implemented here. The current /admin/content editor remains available and continues its existing GitHub publishing flow. These areas need to be designed against the actual Worker configuration and current content.json contract before changing publishing behavior.
+
 ## Deployment gate
 
 `wrangler.example.toml` is a template, not a replacement for the missing production `wrangler.toml` / `wrangler.jsonc`. Confirm the deployed Worker route, OAuth callback origin, existing bindings, and compatibility date before copying any changes into production configuration. This draft must not be deployed until the D1 database is created, migrations are applied, secret bindings are set, and the current Cloudflare config is reconciled.
