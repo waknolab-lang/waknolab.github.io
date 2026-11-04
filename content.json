@@ -183,39 +183,7 @@
       {
         "label": "Rolă 90 cm",
         "widthCm": 90,
-        "printableCm": 88,
-        "tiers": [
-          {
-            "min": 1,
-            "max": 5,
-            "price": null
-          },
-          {
-            "min": 5,
-            "max": 30,
-            "price": null
-          },
-          {
-            "min": 30,
-            "max": 80,
-            "price": null
-          },
-          {
-            "min": 80,
-            "max": 150,
-            "price": null
-          },
-          {
-            "min": 150,
-            "max": null,
-            "price": null
-          }
-        ]
-      },
-      {
-        "label": "Rolă 60 cm",
-        "widthCm": 60,
-        "printableCm": 58,
+        "printableCm": 87,
         "tiers": [
           {
             "min": 1,
