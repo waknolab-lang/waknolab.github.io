@@ -29,3 +29,5 @@
 .wakno-cookie-dialog .wakno-cookie-actions{justify-content:flex-end;margin-top:20px}
 @media(max-width:560px){.wakno-cookie-banner{left:10px;bottom:10px;width:calc(100vw - 20px);padding:16px;border-radius:14px}.wakno-cookie-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.wakno-cookie-button{min-height:42px;padding:9px 8px;font-size:11px}.wakno-cookie-button.primary{grid-column:1/-1;grid-row:1}.wakno-cookie-settings{left:10px;bottom:10px}.wakno-cookie-panel{padding:18px}.wakno-cookie-dialog .wakno-cookie-actions{display:grid;grid-template-columns:1fr}.wakno-cookie-dialog .wakno-cookie-button{width:100%}}
 @media(prefers-reduced-motion:reduce){.wakno-cookie-button{transition:none}}
+
+.footer .privacy-policy-link,.site-footer .privacy-policy-link{color:#b8c6c7!important;text-decoration:underline;text-underline-offset:3px}.footer .privacy-policy-link:hover,.site-footer .privacy-policy-link:hover{color:#fff!important}
