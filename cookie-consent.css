@@ -1,33 +1,35 @@
-/* WAKNO LABS cookie notice and preferences */
-.wakno-cookie-banner,.wakno-cookie-settings,.wakno-cookie-dialog{font-family:Inter,Arial,sans-serif;color:#f2f4f4}
-.wakno-cookie-banner{position:fixed;left:18px;bottom:18px;z-index:1000;box-sizing:border-box;width:min(690px,calc(100vw - 36px));padding:19px 20px;border:1px solid rgba(178,198,200,.32);border-radius:17px;background:rgba(22,26,28,.96);box-shadow:0 16px 45px rgba(0,0,0,.48),0 0 24px rgba(74,168,174,.1);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-.wakno-cookie-banner[hidden],.wakno-cookie-settings[hidden]{display:none!important}
-.wakno-cookie-title{margin:0 0 7px;font-size:17px;font-weight:750;line-height:1.3;color:#fff}
-.wakno-cookie-copy{margin:0;color:#c4cdce;font-size:13px;line-height:1.55}
-.wakno-cookie-actions{display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap;margin-top:15px}
-.wakno-cookie-button{display:inline-flex;align-items:center;justify-content:center;min-height:39px;padding:9px 14px;border:1px solid #50575a;border-radius:10px;background:#25292c;color:#f3f5f5;font:650 12px/1.2 Inter,Arial,sans-serif;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
+/* WAKNO LABS cookie notice and compact preferences */
+.wakno-cookie-banner,.wakno-cookie-dialog{font-family:Inter,Arial,sans-serif;color:#f2f4f4}
+.wakno-cookie-banner{position:fixed;left:16px;bottom:16px;z-index:1000;box-sizing:border-box;width:min(500px,calc(100vw - 32px));padding:14px 16px;border:1px solid rgba(178,198,200,.32);border-radius:15px;background:rgba(22,26,28,.96);box-shadow:0 14px 38px rgba(0,0,0,.45),0 0 20px rgba(74,168,174,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.wakno-cookie-banner[hidden]{display:none!important}
+.wakno-cookie-title{margin:0 0 5px;font-size:15px;font-weight:750;line-height:1.3;color:#fff}
+.wakno-cookie-copy{margin:0;color:#c4cdce;font-size:12px;line-height:1.45}
+.wakno-cookie-actions{display:flex;align-items:center;justify-content:flex-end;gap:7px;flex-wrap:wrap;margin-top:11px}
+.wakno-cookie-button{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:7px 11px;border:1px solid #50575a;border-radius:9px;background:#25292c;color:#f3f5f5;font:650 11.5px/1.2 Inter,Arial,sans-serif;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
 .wakno-cookie-button:hover{background:#303638;border-color:#80bfc1;transform:translateY(-1px)}
 .wakno-cookie-button.primary{background:#356f73;border-color:#4c9195;color:#fff}
 .wakno-cookie-button.primary:hover{background:#41858a}
 .wakno-cookie-button:focus-visible,.wakno-cookie-close:focus-visible{outline:3px solid #8bdde0;outline-offset:3px}
-.wakno-cookie-settings{position:fixed;left:18px;bottom:18px;z-index:999;min-height:36px;padding:8px 12px;border:1px solid rgba(178,198,200,.32);border-radius:10px;background:rgba(27,31,33,.94);color:#dbe4e4;font:600 11px/1.2 Inter,Arial,sans-serif;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.32);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.wakno-cookie-settings:hover{border-color:#70b7bb;color:#fff}
-.wakno-cookie-dialog{width:min(550px,calc(100vw - 24px));max-width:none;max-height:calc(100dvh - 24px);margin:auto;padding:0;overflow:auto;border:1px solid rgba(178,198,200,.38);border-radius:19px;background:#171a1c;color:#f2f4f4;box-shadow:0 24px 80px rgba(0,0,0,.58);scrollbar-width:thin;scrollbar-color:#52666a rgba(8,12,13,.45)}
-.wakno-cookie-dialog::backdrop{background:rgba(3,8,9,.7);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
-.wakno-cookie-panel{padding:23px}
-.wakno-cookie-dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px}
-.wakno-cookie-dialog h2{margin:0;color:#fff;font-size:22px;line-height:1.2}
-.wakno-cookie-dialog p{color:#c4cdce;font-size:14px;line-height:1.6}
-.wakno-cookie-close{position:relative;display:flex;align-items:center;justify-content:center;flex:0 0 38px;width:38px;height:38px;padding:0;border:1px solid #50575a;border-radius:10px;background:#202426;color:#fff;font-size:0;cursor:pointer}
-.wakno-cookie-close::before,.wakno-cookie-close::after{content:"";position:absolute;width:16px;height:2px;border-radius:2px;background:currentColor;transform:rotate(45deg)}
+.wakno-cookie-dialog{width:min(455px,calc(100vw - 28px));max-width:none;max-height:calc(100dvh - 28px);margin:auto;padding:0;overflow:auto;border:1px solid rgba(178,198,200,.38);border-radius:17px;background:#171a1c;color:#f2f4f4;box-shadow:0 22px 70px rgba(0,0,0,.55);scrollbar-width:thin;scrollbar-color:#52666a rgba(8,12,13,.45)}
+.wakno-cookie-dialog::backdrop{background:rgba(3,8,9,.68);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.wakno-cookie-panel{padding:18px}
+.wakno-cookie-dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
+.wakno-cookie-dialog h2{margin:0;color:#fff;font-size:19px;line-height:1.25}
+.wakno-cookie-dialog p{color:#c4cdce;font-size:12px;line-height:1.5;margin:7px 0}
+.wakno-cookie-close{position:relative;display:flex;align-items:center;justify-content:center;flex:0 0 34px;width:34px;height:34px;padding:0;border:1px solid #50575a;border-radius:9px;background:#202426;color:#fff;font-size:0;cursor:pointer}
+.wakno-cookie-close::before,.wakno-cookie-close::after{content:"";position:absolute;width:14px;height:2px;border-radius:2px;background:currentColor;transform:rotate(45deg)}
 .wakno-cookie-close::after{transform:rotate(-45deg)}
-.wakno-cookie-choice{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-top:12px;padding:15px 14px;border:1px solid rgba(178,198,200,.2);border-radius:12px;background:rgba(255,255,255,.035)}
-.wakno-cookie-choice strong{display:block;margin-bottom:4px;color:#f5f7f7;font-size:14px}
-.wakno-cookie-choice p{margin:0;font-size:12px;line-height:1.5}
-.wakno-cookie-choice input{width:19px;height:19px;flex:0 0 19px;margin:1px 0 0;accent-color:#67b9bd}
+.wakno-cookie-choice{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-top:9px;padding:11px 12px;border:1px solid rgba(178,198,200,.2);border-radius:11px;background:rgba(255,255,255,.035)}
+.wakno-cookie-choice strong{display:block;margin-bottom:3px;color:#f5f7f7;font-size:13px}
+.wakno-cookie-choice p{margin:0;font-size:11.5px;line-height:1.45}
+.wakno-cookie-choice input{width:17px;height:17px;flex:0 0 17px;margin:1px 0 0;accent-color:#67b9bd}
 .wakno-cookie-choice input:disabled{opacity:.8}
-.wakno-cookie-dialog .wakno-cookie-actions{justify-content:flex-end;margin-top:20px}
-@media(max-width:560px){.wakno-cookie-banner{left:10px;bottom:10px;width:calc(100vw - 20px);padding:16px;border-radius:14px}.wakno-cookie-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.wakno-cookie-button{min-height:42px;padding:9px 8px;font-size:11px}.wakno-cookie-button.primary{grid-column:1/-1;grid-row:1}.wakno-cookie-settings{left:10px;bottom:10px}.wakno-cookie-panel{padding:18px}.wakno-cookie-dialog .wakno-cookie-actions{display:grid;grid-template-columns:1fr}.wakno-cookie-dialog .wakno-cookie-button{width:100%}}
+.wakno-cookie-dialog .wakno-cookie-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:13px}
+.wakno-cookie-dialog .wakno-cookie-actions [data-cookie="all"]{grid-column:1/-1;grid-row:1}
+.wakno-cookie-dialog .wakno-cookie-actions [data-cookie="necessary"]{grid-column:1;grid-row:2}
+.wakno-cookie-dialog .wakno-cookie-actions [data-cookie="save"]{grid-column:2;grid-row:2}
+.policy-cookie-settings{display:inline;padding:0;border:0;background:transparent;color:#82cdd0;font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.policy-cookie-settings:hover{color:#fff}
+@media(max-width:560px){.wakno-cookie-banner{left:12px;bottom:12px;width:calc(100vw - 24px);padding:12px 13px;border-radius:13px}.wakno-cookie-title{font-size:14px}.wakno-cookie-copy{font-size:11.5px}.wakno-cookie-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}.wakno-cookie-button{min-height:32px;padding:7px 8px;font-size:10.5px}.wakno-cookie-actions [data-cookie="all"]{grid-column:1/-1;grid-row:1}.wakno-cookie-actions [data-cookie="settings"]{grid-column:1;grid-row:2}.wakno-cookie-actions [data-cookie="necessary"]{grid-column:2;grid-row:2}.wakno-cookie-panel{padding:15px}.wakno-cookie-dialog .wakno-cookie-actions{grid-template-columns:1fr 1fr}.wakno-cookie-dialog .wakno-cookie-button{min-height:34px;padding:7px 8px;font-size:10.5px}}
+@media(max-height:650px){.wakno-cookie-dialog{max-height:calc(100dvh - 16px)}.wakno-cookie-panel{padding:13px}.wakno-cookie-choice{margin-top:7px;padding:9px 10px}}
 @media(prefers-reduced-motion:reduce){.wakno-cookie-button{transition:none}}
-
-.footer .privacy-policy-link,.site-footer .privacy-policy-link{color:#b8c6c7!important;text-decoration:underline;text-underline-offset:3px}.footer .privacy-policy-link:hover,.site-footer .privacy-policy-link:hover{color:#fff!important}
