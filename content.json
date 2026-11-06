@@ -114,7 +114,7 @@
   "about": {
     "title": "IDEILE TALE PRIND VIAȚĂ.",
     "description": "La WAKNO LABS transformăm ideile în materiale vizuale care atrag atenția. Fie că ai nevoie de un sticker, un tricou personalizat sau de o inscripționare pentru afacerea ta, pornim de la nevoile proiectului tău.",
-    "image": "assets/hero.webp",
+    "image": "",
     "showImage": true
   },
   "contact": {
@@ -296,5 +296,23 @@
         "enabled": true
       }
     ]
+  },
+  "seo": {
+    "home": {
+      "title": "Producție Publicitară București | WAKNO LABS",
+      "description": "WAKNO LABS — producție publicitară în București și Ilfov: stickere personalizate, colantări auto și vitrine, bannere și textile personalizate."
+    },
+    "portfolio": {
+      "title": "Portofoliu | WAKNO LABS",
+      "description": "Proiecte de producție publicitară, stickere, colantări, print și personalizare realizate de WAKNO LABS."
+    },
+    "dtf": {
+      "title": "Print DTF București | WAKNO LABS",
+      "description": "Transferuri DTF pentru textile. Alege lățimea rolei și trimite comanda către WAKNO LABS."
+    },
+    "quote": {
+      "title": "Solicită ofertă | WAKNO LABS",
+      "description": "Cere o ofertă pentru stickere, colantări, bannere, textile și alte servicii WAKNO LABS."
+    }
   }
 }
