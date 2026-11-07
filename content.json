@@ -218,12 +218,9 @@
     "cloudflareToken": ""
   },
   "offerForm": {
-    "recipientEmail": "waknolab@gmail.com",
     "heading": "CE PUTEM FACE PENTRU TINE?",
     "prompt": "Alege serviciile dorite și completează detaliile.",
     "submitLabel": "TRIMITE SOLICITAREA",
-    "successTitle": "Solicitarea ta este pregătită!",
-    "successMessage": "Îți mulțumim că ai ales WAKNO LAB. Finalizează trimiterea din aplicația de email care se deschide. Solicitarea nu este transmisă până când apeși „Trimite” în aplicația de email.",
     "services": [
       {
         "id": "Stickere și autocolante",
