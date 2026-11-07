@@ -1067,11 +1067,9 @@ function waknoShowUnifiedSuccess(isDtf){
 }
 (()=>{
 const form=document.getElementById('waknoOfferForm'),list=document.getElementById('waknoServiceList'),add=document.getElementById('waknoAddService');if(!form||!list)return;
-let offerSettings={};
-const template=list.querySelector('.wakno-service-entry').cloneNode(true);let nextIndex=1;let recipient='waknolab@gmail.com';
+const template=list.querySelector('.wakno-service-entry').cloneNode(true);let nextIndex=1;
 function applyOfferSettings(d){
- const o=d?.offerForm||{};offerSettings=o;
- const e=o.recipientEmail||d?.contact?.email;if(typeof e==='string'&&isEmail(e))recipient=e;
+ const o=d?.offerForm||{};
  const prompt=form.querySelector('.wakno-service-prompt');if(prompt&&o.prompt)prompt.textContent=o.prompt;
  const heading=document.querySelector('.wakno-quote-intro .wakno-wave-title');if(heading&&o.heading){heading.textContent=o.heading;heading.classList.add('wakno-custom-heading')}
  const submit=form.querySelector('.wakno-offer-send');if(submit&&o.submitLabel){const textNode=[...submit.childNodes].find(n=>n.nodeType===Node.TEXT_NODE&&n.textContent.trim());if(textNode)textNode.textContent=o.submitLabel+' ';else{const span=submit.querySelector('span:not(.wakno-send-arrow)');if(span)span.textContent=o.submitLabel;}}
@@ -1079,8 +1077,6 @@ function applyOfferSettings(d){
  for(const select of [template.querySelector('select'),...list.querySelectorAll('.wakno-service-entry select')]){if(!select)continue;for(const option of [...select.options]){const s=services.find(x=>x.id===option.value||x.id===option.textContent.trim());if(!s)continue;if(s.enabled===false){option.remove();continue;}option.value=s.id;option.textContent=s.label||s.id;}}
  }
 }
-
-const isEmail=x=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x);
 fetch('./content.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(d)applyOfferSettings(d);}).catch(()=>{});
 const groups={
 'Textile personalizate':'offerTextileSource','Stickere și autocolante':'offerStickerOptions','Flyere':'offerFlyerOptions','Afișe / postere':'offerPosterOptions','Bannere':'offerBannerOptions','Litere volumetrice':'offerLettersOptions','Cuburi promoționale personalizate':'offerCubeOptions'};
