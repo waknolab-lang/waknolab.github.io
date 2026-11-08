@@ -87,28 +87,128 @@
   ],
   "clients": [
     {
-      "name": "Kaya Finance & Consulting",
-      "image": "assets/client-kaya.webp"
+      "name": "ACUSTAX",
+      "image": "assets/clients/acu.png"
+    },
+    {
+      "name": "BBY Fashion",
+      "image": "assets/clients/bby.png"
     },
     {
       "name": "Booyakafé",
-      "image": "assets/client-booyakafe.webp"
+      "image": "assets/clients/bo.png"
+    },
+    {
+      "name": "BOEM",
+      "image": "assets/clients/boem.png"
+    },
+    {
+      "name": "Cazi te ridici",
+      "image": "assets/clients/cazi.png"
+    },
+    {
+      "name": "Club CampMap Caravanning",
+      "image": "assets/clients/cmp.png"
+    },
+    {
+      "name": "Cafea + Sunet",
+      "image": "assets/clients/cs.png"
+    },
+    {
+      "name": "Fasfas",
+      "image": "assets/clients/fas.png"
+    },
+    {
+      "name": "Hair House",
+      "image": "assets/clients/hc.png"
+    },
+    {
+      "name": "Joy Garden & Club",
+      "image": "assets/clients/joy.png"
+    },
+    {
+      "name": "Kaya Finance Consulting SRL",
+      "image": "assets/clients/kaya.png"
+    },
+    {
+      "name": "Lotus by the Lake",
+      "image": "assets/clients/lotus.png"
+    },
+    {
+      "name": "Made From Scratch",
+      "image": "assets/clients/mfs.png"
+    },
+    {
+      "name": "Café Margot",
+      "image": "assets/clients/mrgt.png"
+    },
+    {
+      "name": "Powder Society",
+      "image": "assets/clients/pow.png"
+    },
+    {
+      "name": "RTO Barbershop",
+      "image": "assets/clients/rto.png"
+    },
+    {
+      "name": "Sweet Damage Tattoo",
+      "image": "assets/clients/sdt.png"
+    },
+    {
+      "name": "SEEK MUSIC",
+      "image": "assets/clients/seek.png"
+    },
+    {
+      "name": "Să fii cuminte!",
+      "image": "assets/clients/sfc.png"
+    },
+    {
+      "name": "Scratch That",
+      "image": "assets/clients/stat.png"
+    },
+    {
+      "name": "STAX Recording Studio",
+      "image": "assets/clients/stax.png"
+    },
+    {
+      "name": "Logo client",
+      "image": "assets/clients/syn.png"
+    },
+    {
+      "name": "Taboo Lounge Tattoo",
+      "image": "assets/clients/tbo.png"
+    },
+    {
+      "name": "TCG Proview",
+      "image": "assets/clients/tcg.png"
+    },
+    {
+      "name": "thedj.ro",
+      "image": "assets/clients/thdj.png"
+    },
+    {
+      "name": "Urban Up TV",
+      "image": "assets/clients/uptv.png"
+    },
+    {
+      "name": "Urban FM",
+      "image": "assets/clients/urbn.png"
+    },
+    {
+      "name": "WAX11",
+      "image": "assets/clients/wax.png"
+    },
+    {
+      "name": "Streetwise",
+      "image": "assets/clients/wise.png"
+    },
+    {
+      "name": "ZEJ Auto Boost",
+      "image": "assets/clients/zej.png"
     },
     {
       "name": "ACA Industrial",
       "image": "assets/client-aca.webp"
-    },
-    {
-      "name": "BOEM",
-      "image": "assets/client-boem.webp"
-    },
-    {
-      "name": "Urban FM",
-      "image": "assets/client-njoy.webp"
-    },
-    {
-      "name": "Sweet Damage Tattoo",
-      "image": "assets/uploads/1793482861558-bbfa2f25-25c.png"
     }
   ],
   "about": {
@@ -213,9 +313,6 @@
         ]
       }
     ]
-  },
-  "analytics": {
-    "cloudflareToken": "94f81b6668fe4601b6cf6f1516f05748"
   },
   "offerForm": {
     "heading": "CE PUTEM FACE PENTRU TINE?",
