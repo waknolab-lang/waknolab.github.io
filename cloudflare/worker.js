@@ -2,7 +2,7 @@ import {handleAdminApi,submitOrder,scheduledMaintenance,dashboardPage} from './a
 const BASE='https://wakno-labs-auth.waknolab.workers.dev';
 const OWNER='waknolab-lang',REPO='waknolab.github.io',FILE='content.json';
 const enc=new TextEncoder(),dec=new TextDecoder();
-const html=(s,status=200)=>new Response(s,{status,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','content-security-policy':"default-src 'none'; img-src 'self' https://waknolab.com https://raw.githubusercontent.com data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"}});
+const html=(s,status=200)=>new Response(s,{status,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','content-security-policy':"default-src 'none'; img-src 'self' https://waknolab.com https://raw.githubusercontent.com/waknolab-lang/waknolab.github.io/ data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"}});
 const j=(o,status=200)=>new Response(JSON.stringify(o),{status,headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'}});
 const rnd=()=>crypto.randomUUID().replaceAll('-','')+crypto.randomUUID().replaceAll('-','');
 // Base64 encoding in bounded chunks: avoids spreading large arrays onto the JS call stack.
